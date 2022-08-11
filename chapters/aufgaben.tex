@@ -1,0 +1,141 @@
+\section{Aufgaben}
+
+
+\subsection{Multiple Choice}
+
+Seien $A_1, A_2, A_3 \in \F$ paarweise unabhängige Ereignisse, welche Aussage ist korrekt?
+\begin{itemize}
+	\item[\marked] Die Ereignisse $A_1, A_2, A_3$ sind nicht zwangsläufig unabhängig
+	\item[$\square$] Die Ereignisse $A_1, A_2, A_3$ sind zwangsläufig unabhängig
+\end{itemize}
+
+\hrulefill
+
+Es gilt $\Pm[X > t + s \; | \; X > s] = \Pm[X > t]$ für alle $t,s \geq 0$, falls
+\begin{itemize}
+	\item[$\square$] $X \sim \mathcal{U}([a,b])$
+	\item[$\square$] $X \sim \text{Poisson}(\lambda)$
+	\item[\marked] $X \sim \text{Exp}(\lambda)$ (Gedächnislosigkeit)
+\end{itemize}
+
+\hrulefill
+
+Seien $X,Y$ zwei ZV mit gemeinsamer Dichte $f_{X,Y}$. Welche Aussage ist korrekt?
+\begin{itemize}
+	\item[\marked] $X,Y$ sind immer stetig
+	\item[$\square$] Die ZV sind nicht notwendigerweise stetig.
+\end{itemize}
+
+\hrulefill
+
+Seien $(X_i)_{i = 1}^n$ uiv. ZV mit Verteilungsfunktion $F_{X_i} = F$. Was ist die Verteilungsfunktion von $M = \text{max}(X_1,...,X_n)$?
+\begin{itemize}
+	\item[\marked] $F_M(a) = F(a)^n$
+	\item[$\square$] $F_M(a) = 1 - F(a)^n$
+	\item[$\square$] $F_M(a) = (1 - F(a))^n$
+\end{itemize}
+
+\subsection{Sonstige Aufgaben}
+
+\textbf{Aufgabe}
+Es werden ein blauer und ein grüner Würfel geworfen. Wir wählen $\Omega = \{1,...,6\}^2$. Wir betrachten die Algebra:
+$$\F_{\text{sym}} = \{ A \subseteq \Omega \; | \; \forall (\omega_1, \omega_2) \in \Omega, (\omega_1, \omega_2) \in A \Leftrightarrow (\omega_2, \omega_1) \in A  \}$$
+Zeige, dass $\F_{\text{sym}}$ eine $\sigma$-Algebra ist. \medskip
+
+Wir müssen 3 Eigenschaften überprüfen. 
+\begin{enumerate}
+	\item $\forall (\omega_1, \omega_2) \in \Omega \Leftrightarrow (\omega_2, \omega_1) \in \Omega$ daher gilt $\Omega \in \F_{\text{sym}}$.
+	\item Sei $A \in \F_{\text{sym}}$. Somit gilt für jedes $(\omega_1, \omega_2) \in \Omega$
+		$$(\omega_1, \omega_2) \in A \Leftrightarrow (\omega_2, \omega_1) \in \Omega$$
+		was äquivalent ist zu
+		$$(\omega_1, \omega_2) \in A^\complement \Leftrightarrow (\omega_2, \omega_1) \in A^\complement$$
+		somit ist $A^\complement \in \F_{\text{sym}}$.
+	\item Seien $A_1, A_2, ... \in \F_{\text{sym}}$ gilt:
+		\begin{align*}
+			(\omega_1, \omega_2) \in \cup_{i=1}^\infty A_i &\Leftrightarrow \exists i. (\omega_1, \omega_2) \in A_i \\
+			&\Leftrightarrow \exists i. (\omega_2, \omega_1) \in A_i \\
+			&\Leftrightarrow (\omega_2, \omega_1) \in \cup_{i=1}^\infty A_i
+		\end{align*}
+		Somit folgt $\cup_{i=1}^\infty A_i \in \F_{\text{sym}}$.
+\end{enumerate}
+
+\hrulefill
+
+\textbf{Aufgabe}
+Sei $(X_i)_{i \geq 1}$ eine unendliche Folge von unabhängig $\text{Ber}(1/2)$-verteilten ZV. Wir betrachten folgenden Algorithmus:
+
+\begin{algorithmic}
+	\State $i \gets 1$
+	\While{$X_i = X_{i+1}=1$}
+		\State $i = i + 2$
+	\EndWhile
+	\State \Return $Z = X_i + 2 \cdot X_{i+1}$
+\end{algorithmic}
+
+Zeige, dass der Algorithmus immer nach endlich vielen Schritten terminiert (1). Zeige, dass $Z$ eine gleichverteilte ZV in $\{0,1,2\}$ ist (2). Konstruiert einen Algorithmus, der eine $\text{Ber}(1/5)$-verteilten ZV ausgibt (3). \medskip
+
+(1) Wir definieren $A_j := \{ \text{While-Schlaufe wir j-Mal durchlaufen} \}$ und berechnen:
+\begin{align*}
+	\Pm[A_j] &= \Pm \left[ \bigcap_{i=1}^{2j} \{X_i = 1\} \cap (\{X_{2j+1} = 0\} \cup \{X_{2j+2} = 0\}) \right] \\
+	&= \left( \Pi_{i=1}^{2j} \Pm[X_i = 1] \right) \cdot \Pm[X_{2j+1} = 0] \cdot \Pm[X_{2j+2} = 0] \\
+	&= \left(\frac{1}{2}\right)^{2j} \cdot \frac{3}{4}
+\end{align*}
+Wenn wir nun über alle $A_j$ summieren, sehen wir, dass der Algorithmus immer in endlich Schritten terminieren wird. \medskip
+
+(2) Wir wissen, dass alle $A_j$ disjunkt sind.
+\begin{align*}
+	\Pm[Z=0] &= \Pm[\{Z=0\} \cap A] + \Pm[\{Z=0\} \cap A^\complement] = \Sum_{j=0}^\infty \Pm[\{Z=0\} \cap A_j] \\
+	&= \Sum_{j=0}^\infty \left(\frac{1}{2}\right)^{2j + 2} = \frac{1}{4}\Sum_{j=0}^\infty \left(\frac{1}{4}\right)^{j} = \frac{1}{4} \cdot \frac{1}{1 - \frac{1}{4}} = \frac{1}{3}
+\end{align*}
+Dies können wir nun auch für $1,2$ machen uns sehen, dass $Z$ gleichverteilt sein muss.
+
+(3) Wir betrachten folgenden Algorithmus:
+\begin{algorithmic}
+	\State $i \gets 1$
+	\While{$X_i = X_{i+2}=1 \text{ or } X_{i+1}=X_{i+2}=1$}
+		\State $i = i + 3$
+	\EndWhile
+	\State \Return $Z = X_i + 2 \cdot X_{i+1} + 4 \cdot X_{i+2} = 4 \; ? \; 1 : 0$
+\end{algorithmic}
+Es ist leicht wie in $(1), (2)$ zu zeigen, dass er alle Eigenschaften erfüllt.
+
+\hrulefill
+
+\textbf{Aufgabe}
+Sei $T \sim \text{Exp}(\lambda)$. Berechne die Dichte von $T' = c \cdot T^2$ und den Erwartungswert von $T'$. \medskip
+
+Sei $\phi: \R \mapsto \R$ messbar und beschränkt. Wir definieren $\psi(x) = \phi(c \cdot x^2)$. Somit erhalten wir:
+\begin{align*}
+	\E[\phi(T')] &= \E[\phi(c \cdot T^2)] = \E[\psi(T)] = \int_{-\infty}^\infty \psi(x) \lambda e^{-\lambda x}\1_{x \geq 0}dx \\
+	&= \int_0^\infty \phi(c \cdot x^2) \lambda e^{-\lambda x}dx = \int_0^\infty \phi(y) \lambda e^{-\lambda \sqrt{y / c}} \frac{dy}{2 \sqrt{cy}} \\
+\end{align*}
+Wobei wir die Dichte der Exponentialverteilung verwendet haben. daraus folgt:
+$$f_{T'}(y) = \frac{\lambda}{2 \sqrt{cy}} e^{-\lambda \sqrt{y / c}}$$
+Für den Erwartungswert gilt $\E[c \cdot T^2] = c \cdot \E[T^2]$:
+$$\E[T^2] = \int_{0}^\infty x^2 \lambda e^{-\lambda x}dx = \frac{2}{\lambda^2}$$
+Somit erhalten wir $\E[T'] = \frac{2c}{\lambda^2}$.
+
+\hrulefill
+
+\textbf{Aufgabe}
+Sei $X$ eine ZV mit Verteilungsfunktion $F_X$. Zeige, dass $X$ diskret ist.
+$$ F_X(a) = \begin{cases}
+	0, 		& a < 1 \\
+	1/5, 	& 1 \leq a < 4 \\
+	3/4, 	& 4 \leq a < 6 \\
+	1, 		& 6 \leq a \\
+\end{cases}$$ \medskip
+
+Wir stellen fest, dass $\Pm[X = x] = 0$ für alle $x \notin \{1,4,6\}$. Da die Menge $\{1,4,6\}$ endlich ist, ist die ZV diskret.
+
+\hrulefill
+
+\textbf{Aufgabe}
+Sei $T$ eine ZV mit Verteilungsfunktion $F_T$. Zeige, dass $t$ stetig ist.
+$$ F_T(a) = \begin{cases}
+	0, 				& a < 0 \\
+	1 - e^{-2a}, 	& a < \geq 0
+\end{cases}$$ \medskip
+
+Wir stellen fest, dass $F_T$ stückweise stetig differenzierbar ist (auf $(-\infty, 0)$ und $(0, \infty)$). Somit folgt, dass $T$ eine stetige ZV ist.
+

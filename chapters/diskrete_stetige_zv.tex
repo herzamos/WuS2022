@@ -1,0 +1,181 @@
+\section{Diskrete und Stetige ZV}
+
+Per Definition ist eine Verteilungsfunktion immer rechtsstetig, analog dazu können wir die Linksstetigkeit definieren: 
+$$F(x-) = \lim_{t \to 0} F(x-t)$$ 
+
+Jedoch ist $F(x-) = F(x)$ nicht immer wahr, d.h. nicht jede Verteilungsfunktion ist linksstetig. \medskip
+
+\begin{mainbox}{} $\forall x \in \R. \quad F(x) - F(x-) = \Pm[X = x]$.
+\end{mainbox}
+Daraus:
+\begin{enumerate}
+    \item Wenn $F$ in einem Punkt $a \in \R$ nicht stetig ist, dann ist die ``Sprünggrösse" $F(a) - F(a-)$ gleich der Wahrscheinlichkeit, dass $X = a$ ist.
+    \item Wenn $F$ in einem Punkt $a \in \R$ stetig ist, dann ist $P[X = a] = 0$.
+\end{enumerate}
+
+\subsection{Fast sichere Ereignisse}
+
+Ein Ereignis $A \in \F$ tritt \textbf{fast sicher} (f.s./a.s.) ein, falls $\Pm[A] = 1$. Seien $X,Y$ ZV, so schreiben wir: $X \leq Y$ f.s. $\Leftrightarrow \Pm[X \leq Y] = 1$.
+
+
+\subsection{Diskrete ZV}
+
+\begin{mainbox}{Diskret ZV}
+    Eine ZV $X$ heisst \textbf{diskret}, falls $\exists W \subset \R$ endlich oder abzählbar, so dass $X \in W$ f.s. 
+\end{mainbox}
+\begin{subbox}{}
+    Falls $\Omega$ endlich oder abzählbar ist, dann ist $X$ immer diskret.
+\end{subbox}
+
+\begin{mainbox}{}
+Die \textbf{Verteilungsfunktion} einer diskreten ZV ist definiert als: 
+$$(p(x))_{x \in W} \; \text{ wobei } \sum_{x \in W} p(x) = 1$$
+\end{mainbox}
+\begin{mainbox}{}
+Die \textbf{Gewichtsfunktion} einer diskreten ZV ist definiert als: 
+$$\forall x \in W. \quad p(x) = P[X = x]$$
+\end{mainbox}
+
+\subsection{Diskrete Verteilungen}
+
+\subsection*{Bernoulli-Verteilung} 
+Eine Bernoulli-Verteilte ZV kennt nur die Ereignisse $\{0,1\}$, wir schreiben auch $X \sim \text{Ber}(p)$. Sie wird definiert durch: 
+\begin{mainbox}{Bernoulli-Verteilung}
+    $$\Pm[X = 0] = 1 - p \; \text{ und } \; \Pm[X = 1] = p$$
+\end{mainbox}
+
+\subsection*{Binomialverteilung}
+ Dies beschreibt die Wiederholung von Bernoulli-Experimenten. Wir schreiben $X \sim \text{Bin}(n,p)$ und definieren:
+
+ \begin{mainbox}{Binomialverteilung}
+    $$\forall k \in \{0, 1, ..., n\}. \quad \Pm[X = k] = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}$$
+ \end{mainbox}
+
+ \begin{subbox}{}
+    Sei $0 \leq p \leq 1, n \in \N$. \\
+    Seien $X_1, \ldots , X_n$ unabhängige Bernoulli-Zufallsvariablen mit dem Parameter $p$. \\ Dann
+    ist $S_n := X_1 + \ldots + X_n$
+    eine binomial Zufallsvariable mit den Parametern $n$ und $p$.
+\end{subbox}
+
+Insbesondere ist die Verteilung Bin$(1, p)$ die gleiche wie die Verteilung Ber$(p)$. Man kann auch prüfen, dass wenn $X \sim$ Bin$(m, p)$ und $Y \sim$ Bin$(n, p)$ und $X, Y$ unabhängig sind, dann $X + Y \sim$ Bin$(m + n, p)$.
+
+\subsection*{Geometrische Verteilung} Eine Geometrische Verteilung beschriebt das erste Auftreten eines Erfolges. Wir schreiben $X \sim \text{Geom}(p)$ und definieren:
+
+\begin{mainbox}{Geometrische Verteilung}
+    $$\forall k \in \N - \{0\}. \quad \Pm[X = k] = (1-p)^{k-1} \cdot p$$
+\end{mainbox}
+
+\begin{subbox}{}
+    Sei $X_1, X_2, \ldots$ eine Folge von unendlich vielen unabhängigen Bernoulli ZV mit dem Parameter $p$. Dann
+    $T := \text{min}\{n \geq 1 : X_n = 1\}$
+    eine geometrische Zufallsvariable mit dem Parameter $p$.
+\end{subbox}
+
+\begin{subbox}{Abwesenheit der Erinnerung von der geometrische Verteilung}
+    Sei $T \sim$ Geom$(p)$ für einige $0 < p < 1$. Dann
+    $\forall n \geq 0 \forall k \geq 1 \Pm[T \geq n + k | T > n] = P[T \geq k]$.
+\end{subbox}
+
+\subsection*{Poisson-Verteilung} Diese Verteilung ist eine Annäherung an die Binomialverteilung für grosse $n$ und kleine $p$. Sie nimmt nur Werte in $\N$ an. Wir schreiben $X \sim \text{Poisson}(\lambda)$ und definieren:
+
+\begin{mainbox}{Poisson-Verteilung}
+    $$\forall k \in \N, \lambda > 0. \quad \Pm[X = k] = \frac{\lambda^k}{k!}\cdot e^{-\lambda}$$
+\end{mainbox}
+
+\begin{subbox}{Poisson-Approximation der Binomialform}
+    Es sei $\lambda > 0$. Für jedes $n \geq 1$,
+    betrachten wir eine Zufallsvariable $X_n \sim$ Bin$(n, \lambda / n)$. Dann
+    $\forall k \in \N \lim_{n \rightarrow \infty} \Pm[X_n = k] = P[N = k]$,
+    wobei $N$ eine Poisson-Zufallsvariable mit dem Parameter $\lambda$ ist.
+\end{subbox}
+
+\subsection{Stetige ZV}
+
+\begin{mainbox}{}
+    Eine ZV $X$ heisst \textbf{stetig}, wenn ihre Verteilungsfunktion $F_X$ wie folgt geschrieben werden kann:
+    $$\forall x \in \R. \quad F_X(x) = \int_{-\infty}^x f(y)dy$$
+\end{mainbox}
+
+Hierbei ist $f: \R \mapsto \R_+$ die \textbf{Dichte} von $X$. Für die Dichte gilt:
+$$\int_{-\infty}^{+\infty} f(y)dy = 1$$
+
+Es gelten folgende Eigenschaften: 
+\begin{enumerate}
+    \item $\Pm [a \leq x \leq b] = \Pm [a < x < b]$ 
+    \item $\Pm[X = x] = 0$
+    \item $\Pm[X \in [a, b ]] = \Pm [X \in (a,b)]$
+\end{enumerate}
+
+
+\subsection{Stetige Verteilungen}
+
+\subsection*{Gleichverteilung} 
+Dies beschreibt die Situation wobei jedes Ereignis die gleiche Wahrscheinlichkeit hat. Wir schreiben $X \sim \mathcal{U}([a,b])$ und definieren:
+\begin{mainbox}{Gleichverteilung}
+$$f_{a,b}(x) = \begin{cases}
+    0 & x \notin [a,b] \\
+    \frac{1}{b-a} & x \in [a,b]
+\end{cases}$$
+\end{mainbox}
+\begin{subbox}{Eigenschaften einer Gleichverteilte ZV $X$ in $[a, b]$:}
+    \begin{itemize}
+        \item Die Wahrscheinlichkeit, in ein Intervall $[c, c + l] \subset [a, b]$ zu fallen, hängt nur von seiner Länge $l$ ab:
+        $$\Pm[X \in [c, c+l]] = \frac{l}{b-a}$$
+        \item Die Verteilungsfunktion von $X$ ist gleich
+        $$F_X(x) = \begin{cases}
+            0 & x < a, \\
+            \frac{x-a}{b-a} & a \leq x \leq b, \\
+            1 & x > b.
+        \end{cases}$$
+    \end{itemize}
+\end{subbox}
+
+\subsection*{Exponentialverteilung} Dies ist das stetige Pendant zur Geometrischen Verteilung. Wir schreiben $X \sim \text{Exp}(\lambda)$ und definieren:
+\begin{mainbox}{Exponentialverteilung}
+    $$f_{a,b}(x) = \begin{cases}
+        0 &x < 0 \\
+       \lambda \cdot e^{-\lambda x} & x \geq 0
+    \end{cases}$$
+\end{mainbox}
+
+\begin{subbox}{Eigenschaften einer Exponentialverteilte ZV $T$ mit Parameter $\lambda$}
+    \begin{itemize}
+        \item Die Wartezeitwahrscheinlichkeit ist exponentiell klein:
+        $$\forall t \geq 0 \Pm[T > t] = e^{\lambda t}$$
+        \item Abwesenheit der Erinnerung:
+        $$\forall t, s\geq 0 \Pm[T > t + s|T > t] = \Pm[T > s]$$
+    \end{itemize}
+\end{subbox}
+
+
+\subsection*{Normalverteilung} Wir schreiben $X \sim \mathcal{N}(m, \sigma^2)$ und definieren:
+\begin{mainbox}{Normalverteilung}
+    $$f_{m, \sigma}(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \cdot e^{-\frac{(x-m)^2}{2 \sigma^2}}$$
+\end{mainbox}
+
+\begin{subbox}{Eigenschaften einer Normalverteilte ZV}
+    \begin{itemize}
+        \item Wenn $X_1, \ldots , X_n$ sind unabhängige Zufallsvariablen mit Parametern $(m_1, \sigma^2_1), \ldots, (m_n, \sigma^2_n)$
+        jeweils, dann
+        $$Z = m_0 + \lambda_1X_1 + \ldots + \lambda_nX_n$$
+        eine normale Zufallsvariable mit den Parametern $m = m_0 + \lambda_1m_1 + \ldots + \lambda_nm_n$ und $\sigma^2 = m_0 + \lambda^2_1\sigma^2_1 + \ldots + \lambda^2_n\sigma^2_n$ ist.
+        \item Insbesondere, wenn $X \sim \mathcal{N}(0, 1)$ ist (in diesem Fall sagen wir, dass $X$ eine standardnormale
+        Zufallsvariable), dann $$Z = m + \sigma \cdot X$$
+        eine normale Zufallsvariable mit den Parametern $m$ und $\sigma^2$ ist.
+        \item Wenn $X$ eine normale Zufallsvariable mit den Parametern $m$ und $\sigma^2$ ist, dann liegt die gesamte "Wahrscheinlichkeit
+        Masse" hauptsächlich im Intervall $[m - 3\sigma, m + 3\sigma]$. Wir haben nämlich
+        $$\Pm[ |X - m| \geq 3\sigma] \leq 0.0027$$
+    \end{itemize}
+\end{subbox}
+
+
+\subsection*{Standard Normalverteilung} $\mathcal{N}(0,1)$. Weder für die zugehörige Dichte $\varphi(t)$ noch die Verteilungsfunktion $\Phi(t)$ gibt es geschlossene Ausdrücke, aber die Verteilung
+\begin{mainbox}{Standard Normalverteilung}
+    $$\Pm[X \leq t] = \Phi(t) = \int_{-\infty}^t \varphi(s)ds = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^t e^{-\frac{s^2}{2}}$$
+\end{mainbox}
+
+
+ist tabelliert. Ist $X \sim \mathcal{N}(\mu,\sigma^2)$, so ist $\frac{X - \mu}{\sigma} \sim \mathcal{N}(0,1)$.
+
+\columnbreak

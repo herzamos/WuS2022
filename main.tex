@@ -1,0 +1,158 @@
+\documentclass[a4paper,9pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{tikz}
+\usepackage{polynom}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{setspace}
+
+% noindent for paragraphs
+\setlength\parindent{0pt}
+
+% my packages:
+\usepackage[landscape, left=0.75cm, top=1cm, right=0.75cm, bottom=1.5cm, footskip=15pt]{geometry}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, mathtools}
+\usepackage{bbm}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{extarrows}
+\usepackage{algpseudocode}
+
+% Turn off header and footer
+\pagestyle{plain}
+
+% Turn off page numbering
+\pagenumbering{gobble}
+
+% Tables
+\usepackage{tabularx, multirow}
+\usepackage{booktabs}
+\renewcommand*{\arraystretch}{2}
+
+% Make enumerations more compact
+\usepackage{enumitem}
+\setitemize{itemsep=0.5pt}
+\setenumerate{itemsep=0.75pt}
+
+% To include sketches
+\usepackage{graphicx}
+
+% Metadata
+\title{\vspace{-1cm}Cheatsheet WuS\vspace{-0.65cm}}
+\author{Amos Herz\vspace{-0.5cm}}
+\date{FS 2021}
+
+% remove spacing in lists and fancy enumerate
+\usepackage{enumitem}
+\setlist{noitemsep}
+
+% change section/subsection/... font size
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
+% -----------------------------------------------------------------------
+
+% a base set, that is then customised
+\tcbset {
+  base/.style={
+    boxsep=1pt,left=1pt,right=3pt,top=3pt,bottom=3pt,
+    boxrule=0mm,
+    leftrule=1mm,
+    left=1.75mm,
+    arc=0mm, 
+    fonttitle=\bfseries, 
+    colbacktitle=black!10!white, 
+    coltitle=black, 
+    toptitle=0.75mm, 
+    bottomtitle=0.25mm,
+    title={#1}
+  }
+}
+
+\definecolor{darkorange}{RGB}{255, 127, 0}
+
+\newtcolorbox{mainbox}[1]{
+  colframe=darkorange, 
+  base={#1},
+}
+
+\newtcolorbox{subbox}[1]{
+  colframe=black!20!white,
+  base={#1}
+}
+
+% Custom commands to make writing math easier
+\newcommand\R{\mathbb{R}}
+\newcommand\Q{\mathbb{Q}}
+\newcommand\Z{\mathbb{Z}}
+\newcommand\N{\mathbb{N}}
+\newcommand\C{\mathbb{C}}
+\newcommand\X{\mathcal{X}}
+\newcommand\F{\mathcal{F}}
+\newcommand\E{\mathbb{E}}
+\newcommand\Pm{\mathbb{P}}
+\newcommand\1{\mathbbm{1}}
+\newcommand\Max{\mathrm{Max}}
+\newcommand\Min{\mathrm{Min}}
+\newcommand\Limit{\lim_{n \rightarrow \infty}}
+\newcommand\Sup{\mathrm{Sup}}
+\newcommand\Inf{\mathrm{Inf}}
+\newcommand\Def{\textbf{Def.}\hspace{3mm}}
+\newcommand\Bsp{\textit{Bsp.}\hspace{2mm}}
+\newcommand\Satz{\textbf{{Satz.}}\hspace{3mm}}
+\newcommand\Kor{\textbf{Kor.}\hspace{3mm}}
+\newcommand\Bem{\textbf{Bem.}\hspace{3mm}}
+\newcommand\converges[2]{\underset{#1\rightarrow #2}{\longrightarrow}}
+
+\newcommand\Sum{\sum\limits}
+\newcommand\Lim{\lim\limits}
+\newcommand\Int{\int\limits}
+
+\newcommand\Reihe{\sum_{k = 1}^{\infty}}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+
+% Marked checkbox
+\newcommand\marked{\rlap{\raisebox{0.3ex}{\hspace{0.4ex}\tiny \ding{52}}}$\square$}
+
+% Custom Title
+\newcommand\Title[1]{\vspace{1.5mm}\begin{tikzpicture} \node[fancytitle, right=10pt] {\textcolor{white}{#1}}; \end{tikzpicture}}
+
+\begin{document}
+\begin{multicols*}{3}
+
+% _____ BEGINNING OF DOCUMENT __________________________________________________
+\maketitle
+\input{chapters/basics.tex}
+\input{chapters/zufallsvariablen.tex}
+\input{chapters/diskrete_stetige_zv.tex}
+\input{chapters/erwartungswert.tex}
+\input{chapters/gemeinsame_verteilungen.tex}
+\input{chapters/grenzwertsaetze.tex}
+\input{chapters/statistics.tex}
+\input{chapters/test_beispiel.tex}
+\input{chapters/sonstiges.tex}
+\input{chapters/aufgaben.tex}
+
+
+\end{multicols*}
+\begin{small}
+\input{chapters/verteilungen_table.tex}
+\end{small}
+
+% ____ FOOTER __________________________________________________________________
+% Template:
+% original by Christop Erdmann (erdmannc@student.ethz.ch), 2018
+% modified by Andre Emmenegger, 2020
+% modified by Danny Camenisch (dcamenisch@student.ethz.ch), 2021
+% modified by Amos Herz (amherz@student.ethz.ch), 2021
+%
+% Content: 
+% original by Amos Herz (amherz@student.ethz.ch), 2022
+% based on different summaries from many helpful people
+
+\end{document}
