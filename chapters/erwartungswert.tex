@@ -1,4 +1,4 @@
-\section{Erwartungswert}
+\section*{Erwartungswert}
 
 
 Sei $X: \Omega \mapsto \R_+$ eine ZV mit nicht-negativen Werten. Dann ist 
@@ -7,7 +7,7 @@ $$\E[X] = \int_0^\infty (1 - F_X(x))dx$$
 der \textbf{Erwartungswert} von $X$.
 
 
-\subsection{Erwartungswert diskreter ZV}
+\Title{Erwartungswert diskreter ZV}
 
 Sei $X: \Omega \mapsto \R$ eine diskrete ZV mit $X \in W$ f.s. Sei $\phi: \R \mapsto \R$ eine Abbildung. Falls die Summe wohldefiniert ist, gilt:
 $$\E[\phi(X)] = \sum_{x \in W} \phi(x) \cdot \Pm[X = x]$$
@@ -16,7 +16,7 @@ Sei $\phi = \text{id}$, gilt
 $$\E[X] = \sum_{x \in W} x \cdot \Pm[X = x]$$
 
 
-\subsection{Erwartungswert stetiger ZV}
+\Title{Erwartungswert stetiger ZV}
 
 Sei $X$ eine stetige ZV mit Dichtefunktion $f$. Sei $\phi: \R \mapsto \R$ eine Abbildung, sodass $\phi(X)$ eine Zufallsvariable ist. Sofern das Integral wohldefiniert ist, gilt:
 $$\E[\phi(X)] = \int_{-\infty}^\infty \phi(x)f(x)dx$$
@@ -24,7 +24,7 @@ $$\E[\phi(X)] = \int_{-\infty}^\infty \phi(x)f(x)dx$$
  Auch hier können wir analog den Erwartungswert für $\phi = \text{id}$ definieren.
 
 
-\subsection{Rechnen mit Erwartungswerten}
+\Title{Rechnen mit Erwartungswerten}
 
 \begin{mainbox}{}
     Seien $X,Y: \Omega \mapsto \R$ ZV mit $\lambda \in \R$. Falls die Erwartungswerte wohldefiniert sind, gilt:    
@@ -51,7 +51,7 @@ und dabei $\E [1 / Y]$ individuell berechnen. Daraus ergibt sich dann die folgen
 \end{mainbox}
 
 
-\subsection{Extremwertformel}
+\Title{Extremwertformel}
 
 Sei $X$ eine diskrete ZV mit Werten in $\N$. Dann gilt folgende Identität, auch \textbf{Tailsum-Formel} genannt (\textbf{Achtung!} $n=1$):
 $$\E[X] = \sum_{n=1}^\infty \Pm[X \geq n]$$
@@ -60,7 +60,7 @@ Sei $X$ eine stetige ZV mit $X \geq 0$ f.s., dann gilt:
 $$\E[X] = \int_0^\infty \Pm[X > x] dx$$
 
 
-\subsection{Ungleichungen}
+\Title{Ungleichungen}
 
 \begin{mainbox}{Monotonie} Seien $X,Y$ ZV sodass $X \leq Y$ f.s. dann gilt $\E[X] \leq \E[Y]$. \end{mainbox}
 
@@ -79,7 +79,7 @@ $$\E[X] = \int_0^\infty \Pm[X > x] dx$$
 \end{mainbox}
 
 
-\subsection{Varianz}
+\Title{Varianz}
 
 Sei $X$ eine ZV sodass $\E[X^2] < \infty$. Die \textbf{Varianz} von $X$ ist definiert durch 
 \begin{mainbox}{Varianz}
@@ -105,7 +105,7 @@ wobei $m = \E[X]$. Dabei wird $\sigma_X$ auch die \textbf{Standardabweichung} vo
 \end{subbox}
 
 
-\subsection{Kovarianz}
+\Title{Kovarianz}
 
 Die \textbf{Kovarianz} kann verwendet werden, um die Abhängigkeit zweier ZV zu messen.
 

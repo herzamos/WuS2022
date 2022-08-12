@@ -2,7 +2,7 @@
 	\Large{\textbf{Statistik}}
 \end{center}
 
-\section{Schätzer}
+\section*{Schätzer}
 
 Wir nehmen an, dass wir wie einen Wahrscheinlichkeitsraum $(\Omega, \F, \Pm)$ und Zufallsvariablen $X_i$ haben. Zudem haben wir einen Parameterraum $\Theta \subset \R$, wobei $(\Pm_\theta)_{\theta \in \Theta}$ eine Familie von Wahrscheinlichkeitsmassen ist. $\Pm_\theta$ wird auch Modell genannt. Die Gesamtheit der beobachteten Daten nennen wir Stichprobe und die Anzahl $n$ den Stichprobenumfang.
 
@@ -29,7 +29,7 @@ $$\text{MSE}_\theta[T] = \text{Var}_\theta(T) + (\E_\theta[T] - \theta)^2$$
 
 
 
-\subsection{Maximum-Likelihood-Methode}
+\Title{Maximum-Likelihood-Methode}
 
 Nehmen wir an $X_1,...,X_n \in W$ sind ZV unter $\Pm_\theta$. Die \textbf{Likelikhood Funktion} ist definiert durch:
 \begin{mainbox}{Likelikhood Funktion}
@@ -48,7 +48,7 @@ $$T_{\text{ML}} = t_{\text{ML}}(X_1,...,X_n)$$
 Die \textbf{Log-Likelihood} Funktion hat den Vorteil, dass sie durch eine Summe anstelle eines Produkts gegeben ist und daher oftmals einfach zu berechnen ist.
 
 
-\section{Konfidenzintervalle}
+\section*{Konfidenzintervalle}
 
 Wir haben nun Methoden für Schätzer von unbekannten Parameter kennengelernt. Nun wollen wir wissen wie weit diese Schätzer vom effektiven Wert $p$ weg liegen.
 
@@ -66,7 +66,7 @@ Hierbei gilt:
 
 wobei $Z = \sqrt{n}(T-m) =  \frac{X_1 + \ldots + X_n - mn}{\sqrt{n}}$ eine standardnormalverteilte ZV ist.
 
-\subsection{Verteilungsaussagen}
+\Title{Verteilungsaussagen}
 
 \begin{mainbox}{{$\chi^2$-Verteilung}}
 Eine stetige ZV heisst \textbf{$\chi^2$-verteilt} mit $m$ Freiheitsgrade, falls ihre Dichte gegeben ist durch
@@ -89,7 +89,7 @@ $$f_X(x) = \frac{\Gamma (\frac{m+1}{2})}{\sqrt{m \pi} \Gamma (\frac{m}{2})} \lef
 $$Z = \frac{X}{\sqrt{\frac{Y}{m}}} \sim t_m.$$\end{subbox}
 
 
-\subsection{Normalverteilung mit $\mu, \sigma^2$ unbekannt }
+\Title{Normalverteilung mit $\mu, \sigma^2$ unbekannt }
 
 \begin{subbox}{} Seien $X_1,...,X_n$ uiv. $\sim \mathcal{N}(\mu, \sigma^2)$. Dann sind
 $$\overline{X}_n = \frac{1}{n} \Sum_{i=1}^n X_i \qquad \text{und} \qquad S^2 = \frac{1}{n-1} \Sum_{i = 1}^n (X_i - \overline{X}_n)^2$$
@@ -122,22 +122,22 @@ $$\left[ \frac{(n-1) S^2}{\chi_{n-1, 1-\alpha/2}^2} , \frac{(n-1) S^2}{\chi_{n-1
 Fazit: Das wichtigste Tool zur Bestimmung von Konfidenzintervallen sind Verteilungsaussagen über Schätzer. Die ist im Allgemeinen aber schwierig / nicht möglich.
 
 
-\subsection{Approximative Konfidenzintervalle}
+\Title{Approximative Konfidenzintervalle}
 
 Zur Erinnerung der zentrale Grenzwertsatz besagt, dass wenn $X_i$ in $\Pm_\theta$ uiv. sind, dann ist $\sum_{i=1}^n X_i$ approximativ normalverteilt mit $\mu = n \E[X_i]$ und $\sigma^2 = n \text{Var}_\theta[X_i]$. Insbesondere können wir daraus auch eine standard normalverteilte ZV erhalten (siehe Grenzwertsatz).
 
 
-\section{Tests}
+\section*{Tests}
 
 
-\subsection{Null- und Alternativhypothese}
+\Title{Null- und Alternativhypothese}
 
 \begin{mainbox}{Null- und Alternativhypothese}
     Die \textbf{Nullhypothese $H_0$} und die \textbf{Alternativhypothese $H_A$} sind zwei Teilmengen $\Theta_0 \subseteq \Theta, \Theta_A \subseteq \Theta$ wobei $\Theta_0 \cap \Theta_A = \emptyset$. Eine Hypothese heisst \textbf{einfach}, falls die Teilmenge aus einem einzelnen Wert besteht; sonst zusammengesetzt.
 \end{mainbox}
 
 
-\subsection{Test und Entscheidung}
+\Title{Test und Entscheidung}
 
 \begin{mainbox}{Test}
     Ein \textbf{Test} ist ein $(T, K)$, wobei $T$ eine ZV der Form $T = t(X_1,...,X_n)$ ist und $K \subseteq \R$ ist eine deterministische Teilmenge von $\R$. Man nennt $T$ die \textbf{Teststatistik} und $K$ den \textbf{Verwerfungsbereich} oder kritischen Bereich.
@@ -162,7 +162,7 @@ Wir wollen nun anhand der Daten $(X_1(\omega), ..., X_n(\omega))$ entscheiden ob
 \end{subbox}
 
 
-\subsection{Signifikanzniveau und Macht}
+\Title{Signifikanzniveau und Macht}
 
 Bei der Auswahl eines geeigneten Tests ist insbesondere die Minimierung von Fehlern 1. Art entscheidend. \smallskip
 
@@ -190,7 +190,7 @@ Das obige asymmetrische Vorgehen macht es schwieriger, die Nullhypothese zu verw
 
 
 
-\subsection{Konstruktion von Tests}
+\Title{Konstruktion von Tests}
 
 Wir nehmen an, dass $X_1,...,X_n$ diskret oder gemeinsam stetig sind unter $\Pm_{\theta_0}$ und $\Pm_{\theta_A}$, wobei $\theta_0 \neq \theta_A$ von der einfachen Form sind. \smallskip
 
@@ -216,7 +216,7 @@ Sei $(T', K')$ ein Test mit S-Niveau $\alpha \leq \alpha^*$ so gilt:
 $$\Pm_{\theta_A}[T' \in K'] \leq \Pm_{\theta_A}[T \in K]$$
 \end{mainbox}
 
-\subsection{p-Wert}
+\Title{p-Wert}
 
 Wir wollen eine Hypothese $H_0 : \theta = \theta_0$ gegen eine Alternativhypothese $H_A : \theta \in \Theta_A$ testen. Eine Familie von Tests $(T, (K_t)_{t \geq 0})$ heisst \textbf{geordnet} bzgl. $T$ falls $K_t \subset \R$ und $s \leq t \Rightarrow K_t \subset K_s$ gilt. Typische Beispiele dafür sind $K_t = (t, \infty)$ (rechtsseitiger Test), $K_t = (-\infty, -t)$ (linksseitiger Test) und $K_t =  (-\infty, -t) \cup (t, \infty)$ (beidseitiger Test).
 

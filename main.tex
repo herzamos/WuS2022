@@ -52,7 +52,7 @@
 
 % change section/subsection/... font size
 \usepackage{titlesec}
-\titleformat*{\section}{\large\bfseries}
+\titleformat*{\section}{\huge\bfseries}
 \titleformat*{\subsection}{\large\bfseries}
 % -----------------------------------------------------------------------
 
@@ -74,6 +74,7 @@
 }
 
 \definecolor{darkorange}{RGB}{255, 127, 0}
+\definecolor{darkerorange}{RGB}{230, 114, 0}
 
 \newtcolorbox{mainbox}[1]{
   colframe=darkorange, 
@@ -84,6 +85,8 @@
   colframe=black!20!white,
   base={#1}
 }
+
+\tikzstyle{fancytitle} = [fill=darkerorange, text=white, font=\small\bfseries]
 
 % Custom commands to make writing math easier
 \newcommand\R{\mathbb{R}}

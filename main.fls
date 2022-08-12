@@ -1,8 +1,8 @@
-PWD c:/Users/herza/Desktop/WuS Cheatsheet
+PWD c:/Users/herza/Desktop/WuS2022
 INPUT c:/texlive/2021/texmf.cnf
 INPUT c:/texlive/2021/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/herza/Desktop/WuS Cheatsheet/main.tex
+INPUT c:/Users/herza/Desktop/WuS2022/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2021/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT c:/texlive/2021/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -823,7 +823,8 @@ INPUT ./chapters/basics.tex
 INPUT chapters/basics.tex
 INPUT ./chapters/basics.tex
 INPUT chapters/basics.tex
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
@@ -836,6 +837,8 @@ INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT ./chapters/zufallsvariablen.tex
 INPUT chapters/zufallsvariablen.tex
 INPUT ./chapters/zufallsvariablen.tex
@@ -880,8 +883,12 @@ INPUT c:/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm9.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm6.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm5.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm10.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm7.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm8.tfm
 INPUT ./chapters/test_beispiel.tex
 INPUT chapters/test_beispiel.tex
 INPUT ./chapters/test_beispiel.tex
@@ -900,28 +907,23 @@ INPUT ./chapters/aufgaben.tex
 INPUT chapters/aufgaben.tex
 INPUT ./chapters/aufgaben.tex
 INPUT chapters/aufgaben.tex
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT ./chapters/verteilungen_table.tex
 INPUT chapters/verteilungen_table.tex
 INPUT ./chapters/verteilungen_table.tex
 INPUT chapters/verteilungen_table.tex
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm8.tfm
 INPUT main.aux
 INPUT c:/Users/herza/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm9.600pk
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb
-INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
@@ -930,7 +932,6 @@ INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
