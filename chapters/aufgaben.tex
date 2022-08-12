@@ -139,3 +139,68 @@ $$ F_T(a) = \begin{cases}
 
 Wir stellen fest, dass $F_T$ stückweise stetig differenzierbar ist (auf $(-\infty, 0)$ und $(0, \infty)$). Somit folgt, dass $T$ eine stetige ZV ist.
 
+\hrulefill
+
+Am Flughafen Zürich starten und landen täglich um die 750 Flugzeuge, welche ca. 80'000 Menschen von den Ferien abholen oder in die Ferien bringen. Aufgrund der Corona-Pandemie ist die tägliche Anzahl der Passagiere am Flughafen Zürich im April 2020 auf ca. 800 gesunken, was zu einem erheblichen Flugverkehrseinbruch geführt hat. Forscher der Universität Leipzig haben herausgefunden, dass sich durch den Rückgang des Flugverkehrs ca. $9 \%$ weniger Cirruswolken bilden konnten. Da Cirruswolken dafür bekannt sind, dass sie die Wärme in der Erdatmosphäre einschliessen, vermuten wir, dass die tägliche Höchsttemperatur im April 2020 tiefer war als im Vorjahr. Die Höchsttemperaturen in den ersten 9 Tagen im April 2020 waren
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{|c|ccccccccc|}
+\hline Tag $i$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+\hline Temperatur $x_{i}$ & 15 & $18.4$ & $20.9$ & 16 & 17 & 23 & $21.1$ & 21 & 15 \\
+\hline
+\end{tabular}
+}
+Nehmen Sie an, dass die Höchsttemperaturen Realisierungen von unabhängigen und je $\mathcal{N}\left(\mu, \sigma^{2}\right)$ verteilten Zufallsvariablen sind, wobei $\mu$ und $\sigma^{2}>0$ unbekannt sind. Im April 2019 lag die durchschnittliche Höchsttemperatur bei 22 Grad. Wir möchten auf dem 5\%-Niveau testen, ob durch den Flugstopp im April 2020 die erwartete tägliche Höchsttemperatur im Vergleich zum Wert vom Vorjahr gesunken ist.
+
+(a) Führen Sie einen geeigneten Test durch. Geben Sie dazu
+\begin{enumerate}[label=\roman*]
+	\item das Modell,
+	\item die Hypothese und Alternative,
+	\item die Teststatistik,
+	\item die Verteilung der Teststatistik unter der Hypothese,
+	\item den Verwerfungsbereich,
+	\item den beobachteten Wert der Teststatistik, sowie
+	\item den Testentscheid an.
+\end{enumerate}
+Kennzahlen: $\bar{x}_{9}=18.6, s_{9}=3.0, s_{9}^{2}=9.0$.
+
+\textbf{Lösung:}
+\begin{enumerate}[label=\roman*]
+	\item Sei $X_{1}, \ldots, X_{9}$ die Stichprobe, welche die Daten $x_{1}, \ldots, x_{9}$ realisiert. Nach der Aufgabenstellung sind $X_{1}, \ldots, X_{9}$ i.i.d. $\sim \mathcal{N}\left(\mu, \sigma^{2}\right)$ unter $P_{\vartheta}$, wobei $\vartheta=\left(\mu, \sigma^{2}\right)$ ein unbekannter Parameter ist.
+	\item Es ist naheliegend, als Hypothese und Alternative
+$$
+H_{0}: \mu=\mu_{0}:=22 \text { und } H_{A}: \mu<\mu_{0}
+$$
+zu wählen.
+	\item Da $\mu$ und $\sigma^{2}$ unbekannt sind, ist es naheliegend, einen $t$-Test durchzuführen. Als Teststatistik wählen wir also
+$$
+T=\frac{\bar{X}_{9}-\mu_{0}}{S_{9} / \sqrt{9}} .
+$$
+wobei $\bar{X}_{n}=\frac{1}{n} \sum_{i=1}^{n} X_{i}$ und $S_{n}^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}_{n}\right)^{2}$.
+	\item Unter $H_{0}$ folgt $T$ einer $t$-Verteilung mit 8 Freiheitsgraden.
+	\item Nach der Alternative hat der kritische Bereich die Form $K_{<}=\left(-\infty, c_{<}\right)$für ein zu bestimmendes $c_{<}$. Für $\alpha=0.05$ wählen wir $c_{<}$so, dass
+	$$
+	\alpha=P_{H_{0}}\left[T<c_{<}\right] .
+	$$
+	Also ist $c_{<}=t_{n-1, \alpha}=-t_{n-1,1-\alpha}=-t_{8,0.95}=-1.860$.
+	\item Der beobachtete Wert der Teststatistik ist
+	$$
+	T(\omega)=t\left(x_{1}, \ldots, x_{9}\right)=\frac{18.6-22}{3 / 3}=-3.4 .
+	$$
+	\item Wegen $T(\omega) \in K_{<}$verwerfen wir somit die Hypothese und nehmen die Alternative an. Die Daten sprechen also tatsächlich dafür, dass die durchschnittliche Höchsttemperatur gesunken ist.
+\end{enumerate}
+(b) Bestimmen Sie mit den vorhandenen Tabellen eine möglichst scharfe obere Grenze für den realisierten p-Wert.
+
+\textbf{Lösung:}
+Der realisierte p-Wert ist
+\begin{align*}
+	\mathrm{p}-\operatorname{Wert}(\omega) & =\left.P_{H_{0}}\left[T<t_{0}\right]\right|_{t_{0}=T(\omega)}\\ & =P_{H_{0}}[T<-3.4]=1-P_{H_{0}}[T<3.4] .
+\end{align*}
+Aus den vorhandenen Tabellen folgt wegen $t_{8,0.995}=3.355<3.4$, dass
+$$
+0.995 \leq P_{H_{0}}[T<3.4] \leq 1 .
+$$
+Also gilt
+$$
+0 \leq \mathrm{p}-\operatorname{Wert}(\omega) \leq 0.005
+$$
+\hrulefill

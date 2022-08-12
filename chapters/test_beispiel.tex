@@ -1,51 +1,72 @@
 \section*{Testbeispiele}
-\Title{Normalverteilung, Test für Erwartungswert bei bekannter Varianz, z-Test}
+\Title{Normalverteilung, Test für Erwartungswert} \\
+\Title{bei bekannter Varianz, z-Test}
 
-\textbf{Variabeln}: $X_1, \ldots , X_n$ i.i.d. $\sim$ $\mathcal{N}(\theta, \sigma^2)$ unter $\Pm_\theta$ mit bekannter Varianz $\sigma^2$.
-
-\textbf{Hypothese}: $H_0 : \theta = \theta_0$
-
-\textbf{Alternativ}: $H_A : \theta > \theta_0$ oder $\theta < \theta_0$ (\textit{einseitig}), oder $\theta \neq \theta_0$ (\textit{zweiseitig}).
-
-\textbf{Teststatistik}: $$T := \frac{\overline{X}_n - \theta_0}{\sigma / \sqrt{n}}$$
-
-\textbf{Kritische Bereich}: $(c_>, \infty)$ wenn $H_A : \theta > \theta_0$, bzw. $(-\infty, c_<)$, bzw. $(-\infty, -c_\neq) \cup (c_\neq, \infty)$. Im zweiseitigen Fall verwirft man $H_0$ also zugunsten der Alternative $H_A : \theta \neq \theta_0$, falls $|T| > c_\neq$ ist.
-Um $c_>, c_<, c_\neq$ zu bestimmen:
-$$\alpha=\mathbb{P}_{\theta_{0}}\left[T \in K_{>}\right]=\mathbb{P}_{\theta_{0}}\left[T>c_{>}\right]=1-\mathbb{P}_{\theta_{0}}\left[T \leq c_{>}\right]=1-\Phi\left(c_{>}\right)$$ $$\Rightarrow c_> = \Phi^{-1}(1- \alpha) =: z_{1 - \alpha}$$
-verwirft man also $H_{0}$, falls
-$$
-\overline{X}_{n}>\theta_{0}+z_{1-\alpha} \frac{\sigma}{\sqrt{n}}
-$$
-Analog ist $c_< = z_\alpha = -z_{1-\alpha}$ und $c_\neq z_{1 - \frac{\alpha}{2}}$.
-
-\Title{Normalverteilung, Test für Erwartungswert bei unbekannter Varianz, t-Test}
-
-\textbf{Variabeln}: $X_1, \ldots , X_n$ i.i.d. $\sim$ $\mathcal{N}(\theta, \sigma^2)$ unter $\Pm_\theta$ wobei $\theta = (\mu, \sigma^2)$.
+\textbf{Variabeln}: $X_1, \ldots , X_n$ i.i.d. $\sim$ $\mathcal{N}(\mu, \sigma^2)$ unter $\Pm_\mu$ mit bekannter Varianz $\sigma^2$.
 
 \textbf{Hypothese}: $H_0 : \mu = \mu_0$
 
-\textbf{Alternativ}: $H_A : \theta > \theta_0$ oder $\theta < \theta_0$ (\textit{einseitig}), oder $\theta \neq \theta_0$ (\textit{zweiseitig}).
+\textbf{Alternativ}: $H_A : \mu > \mu_0$ oder $\mu < \mu_0$ (\textit{einseitig}), oder $\mu \neq \mu_0$ (\textit{zweiseitig}).
+
+\textbf{Teststatistik}: $$T := \frac{\overline{X}_n - \mu_0}{\sigma / \sqrt{n}}$$
+
+\textbf{Kritische Bereich}: \renewcommand\arraystretch{1.8}
+\begin{center}
+    \begin{tabular}{l|l}
+  		Alternative $H_A$ & Kritischer Bereich \\
+  		\hline
+  		$\mu < \mu_0 $ & $(-\infty, z_\alpha)$ \\
+  		\hline
+  		$\mu > \mu_0$ & $(z_{1-\alpha}, \infty)$ \\
+  		\hline
+  		$\mu \neq \mu_0$ & $(-\infty, z_{\alpha/2}) \cup (z_{1-\alpha/2}, \infty)$ 
+	\end{tabular}
+\end{center}
+\renewcommand{\arraystretch}{1}
+Wobei $z_\alpha = \Phi^{-1}(\alpha)$ ist und $z_\alpha = -z_{1-\alpha}$.
+
+\Title{Normalverteilung, Test für Erwartungswert} \\
+\Title{bei unbekannter Varianz, t-Test}
+
+\textbf{Variabeln}: $X_1, \ldots , X_n$ i.i.d. $\sim$ $\mathcal{N}(\mu, \sigma^2)$ unter $\Pm_\mu$ wobei $\mu = (\mu, \sigma^2)$.
+
+\textbf{Hypothese}: $H_0 : \mu = \mu_0$
+
+\textbf{Alternativ}: $H_A : \mu > \mu_0$ oder $\mu < \mu_0$ (\textit{einseitig}), oder $\mu \neq \mu_0$ (\textit{zweiseitig}).
 
 \textbf{Teststatistik}:
 $$
-T:=\frac{\bar{X}_{n}-\mu_{0}}{S / \sqrt{n}} \sim t_{n-1} \text { unter } \mathbb{P}_{\theta_{0}}
+T:=\frac{\bar{X}_{n}-\mu_{0}}{S / \sqrt{n}} \sim t_{n-1} \text { unter } \mathbb{P}_{\mu_{0}}
 $$
 wir ersetzen also die unbekannte Varianz durch den Schätzer
 $$
 S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}_{n}\right)^{2}
 $$
 
-\textbf{Kritische Bereich}: die kritischen Werte hier sind $c_{>}=t_{n-1,1-\alpha}$, bzw. $c_{<}=t_{n-1, \alpha}=-t_{n-1,1-\alpha}$, bzw. $c_{f}=t_{n-1,1-\frac{\alpha}{2}}$. Für $t_{m, \gamma}$ es gilt $P\left[X \leq t_{m, \gamma}\right]=\gamma$ für $X$-verteilt mit $m$ Freiheitsgraden, d.h. $X \sim t_{m}$.
+\textbf{Kritische Bereich}: \renewcommand\arraystretch{1.8}
+\begin{center}
+    \begin{tabular}{l|l}
+  		Alternative $H_A$ & Kritischer Bereich \\
+  		\hline
+  		$\mu < \mu_0 $ & $(-\infty, t_{n-1, \alpha})$ \\
+  		\hline
+  		$\mu > \mu_0$ & $(t_{n-1, 1-\alpha}, \infty)$ \\
+  		\hline
+  		$\mu \neq \mu_0$ & $(-\infty, t_{n-1, \alpha/2}) \cup (t_{n-1, 1-\alpha/2}, \infty)$ 
+	\end{tabular}
+\end{center}
+\renewcommand{\arraystretch}{1}
+Wobei $t_{m, \gamma}$ es gilt $P\left[X \leq t_{m, \gamma}\right]=\gamma$ für $X$-verteilt mit $m$ Freiheitsgraden, d.h. $X \sim t_{m}$.
 
 \Title{Gepaarter Zweistichproben-Test bei Normalverteilung}
 
-\textbf{Variabeln}: $X_1, \ldots , X_n$ i.i.d. $\sim$ $\mathcal{N}(\mu_X, \sigma^2)$ und $Y_1, \ldots , Y_n$ i.i.d. $\sim$ $\mathcal{N}(\mu_Y, \sigma^2)$ unter $\Pm_\theta$ wobei $\theta = (\mu, \sigma^2)$.
+\textbf{Variabeln}: $X_1, \ldots , X_n$ i.i.d. $\sim$ $\mathcal{N}(\mu_X, \sigma^2)$ und $Y_1, \ldots , Y_n$ i.i.d. $\sim$ $\mathcal{N}(\mu_Y, \sigma^2)$ unter $\Pm_\mu$ wobei $\mu = (\mu, \sigma^2)$.
 
-Die Differenzen $Z_{i}:=X_{i}-Y_{i}$ sind nämlich unter $\mathbb{P}_{\theta}$ i.i.d. $\sim \mathcal{N}\left(\mu_{X}-\mu_{Y}, 2 \sigma^{2}\right)$. Damit kann man die bisherigen Tests in leicht angepasster Form benutzen, sowohl für bekannte wie für unbekannte Varianz $\sigma^{2}$. Die resultierenden Tests heissen dann nicht überraschend gepaarter Zweistichproben-z-Test (bei bekanntem $\left.\sigma^{2}\right)$ bzw. gepaarter Zweistichproben- $t$-Test (bei unbekanntem $\sigma^{2}$ ).
+Die Differenzen $Z_{i}:=X_{i}-Y_{i}$ sind nämlich unter $\mathbb{P}_{\mu}$ i.i.d. $\sim \mathcal{N}\left(\mu_{X}-\mu_{Y}, 2 \sigma^{2}\right)$. Damit kann man die bisherigen Tests in leicht angepasster Form benutzen, sowohl für bekannte wie für unbekannte Varianz $\sigma^{2}$. Die resultierenden Tests heissen dann nicht überraschend gepaarter Zweistichproben-z-Test (bei bekanntem $\left.\sigma^{2}\right)$ bzw. gepaarter Zweistichproben- $t$-Test (bei unbekanntem $\sigma^{2}$ ).
 
 \Title{Ungepaarter Zweistichproben-Test bei Normalverteilung}
 
-\textbf{Variabeln}: $X_1, \ldots , X_n$ i.i.d. $\sim$ $\mathcal{N}(\mu_X, \sigma^2)$ und $Y_1, \ldots , Y_m$ i.i.d. $\sim$ $\mathcal{N}(\mu_Y, \sigma^2)$ unter $\Pm_\theta$ wobei $\theta = (\mu, \sigma^2)$.
+\textbf{Variabeln}: $X_1, \ldots , X_n$ i.i.d. $\sim$ $\mathcal{N}(\mu_X, \sigma^2)$ und $Y_1, \ldots , Y_m$ i.i.d. $\sim$ $\mathcal{N}(\mu_Y, \sigma^2)$ unter $\Pm_\mu$ wobei $\mu = (\mu, \sigma^2)$.
 \begin{enumerate}
     \item $\sigma^{2}$ bekannt (\textit{ungepaarte Zweistichproben- $z$-Test.}): 
 
@@ -53,7 +74,7 @@ Die Differenzen $Z_{i}:=X_{i}-Y_{i}$ sind nämlich unter $\mathbb{P}_{\theta}$ i
     $$
     T:=\frac{\left(\bar{X}_{n}-\bar{Y}_{m}\right)-\left(\mu_{X}-\mu_{Y}\right)}{\sigma \sqrt{\frac{1}{n}+\frac{1}{m}}} \sim \mathcal{N}(0,1)
     $$
-    unter jedem $\mathbb{P}_{\theta}$. Dabei ist $\sigma$ nach Annahme bekannt, und $\mu_{X}-\mu_{Y}$ muss sich aus der gewünschten Hypothese $H_{0}$ als bekannt ergeben. Die 
+    unter jedem $\mathbb{P}_{\mu}$. Dabei ist $\sigma$ nach Annahme bekannt, und $\mu_{X}-\mu_{Y}$ muss sich aus der gewünschten Hypothese $H_{0}$ als bekannt ergeben. Die 
     
     \textbf{Kritischen Werte}: Wie oben geeignete Quantile der $\mathcal{N}(0,1)$-Verteilung, je nach Alternative. 
     \item $\sigma^{2}$ unbekannt \textit{Zweistichproben-t-Test}:
@@ -75,5 +96,5 @@ Die Differenzen $Z_{i}:=X_{i}-Y_{i}$ sind nämlich unter $\mathbb{P}_{\theta}$ i
     $$
     T:=\frac{\left(\bar{X}_{n}-\bar{Y}_{m}\right)-\left(\mu_{X}-\mu_{Y}\right)}{S \sqrt{\frac{1}{n}+\frac{1}{m}}} \sim t_{n+m-2}
     $$
-    unter jedem $\mathbb{P}_{\theta}$. Der Rest geht dann analog wie oben.
+    unter jedem $\mathbb{P}_{\mu}$. Der Rest geht dann analog wie oben.
 \end{enumerate}

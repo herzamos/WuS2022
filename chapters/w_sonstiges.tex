@@ -1,0 +1,14 @@
+\section*{Sonstiges}
+
+\begin{mainbox}{Summe Unhabhängiger ZV}
+    $$f_{X+Y}(a) = \int_{y=-\infty}^{\infty} f_X(a - y)f_Y(y) dy$$
+    \begin{align*}
+        F_{X+Y}(a) & = \Pm(X+Y \leq a) \\
+        & = \int \int_{x + y \leq a} f_X (x) f_Y(y) dx dy \\
+        & = \int_{y = - \infty}^\infty \int_{x = -\infty}^{a - y} f_X(x) dx f_Y(y) dy \\
+        & = \int_{y=-\infty}^{\infty} F_X(a - y)f_Y(y) dy
+    \end{align*}
+    Im Diskrete Falle, $\sum$ statt $\int$ und $p(y)$ statt $f(y)$
+\end{mainbox}
+\vfill\null
+\columnbreak

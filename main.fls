@@ -870,6 +870,10 @@ INPUT ./chapters/grenzwertsaetze.tex
 INPUT chapters/grenzwertsaetze.tex
 INPUT ./chapters/grenzwertsaetze.tex
 INPUT chapters/grenzwertsaetze.tex
+INPUT ./chapters/w_sonstiges.tex
+INPUT chapters/w_sonstiges.tex
+INPUT ./chapters/w_sonstiges.tex
+INPUT chapters/w_sonstiges.tex
 INPUT ./chapters/statistics.tex
 INPUT chapters/statistics.tex
 INPUT ./chapters/statistics.tex
