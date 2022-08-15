@@ -13,9 +13,7 @@
 \setlength\parindent{0pt}
 
 % my packages:
-\usepackage[landscape, left=.8cm, top=.8cm, right=.8cm, bottom=.8cm]{geometry}
-% Setting page margins
-
+\usepackage[landscape, left=0.75cm, top=1cm, right=0.75cm, bottom=1.5cm, footskip=15pt]{geometry}
 \usepackage{amsmath, amssymb, amsfonts, amsthm, mathtools}
 \usepackage{bbm}
 \usepackage{tcolorbox}
@@ -23,7 +21,6 @@
 \usepackage{physics}
 \usepackage{extarrows}
 \usepackage{algpseudocode}
-\usepackage{bbm}
 
 % Turn off header and footer
 \pagestyle{plain}
@@ -57,21 +54,6 @@
 \usepackage{titlesec}
 \titleformat*{\section}{\huge\bfseries}
 \titleformat*{\subsection}{\large\bfseries}
-
-\makeatletter
-\renewcommand{\section}{\@startsection{section}{1}{0mm}%
-                                {-1ex plus -.5ex minus -.2ex}%
-                                {1.5ex plus .2ex}%x
-                                {\normalfont\Large\bfseries}}
-\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
-                                {-1ex plus -.5ex minus -.2ex}%
-                                {1ex plus .2ex}%
-                                {\normalfont\small\bfseries}}
-\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
-                                {-1ex plus -.5ex minus -.2ex}%
-                                {1ex plus .2ex}%
-                                {\normalfont\small\bfseries}}
-\makeatother
 % -----------------------------------------------------------------------
 
 % a base set, that is then customised
@@ -144,16 +126,10 @@
 \newcommand\Title[1]{\vspace{1.5mm}\begin{tikzpicture} \node[fancytitle, right=10pt] {\textcolor{white}{#1}}; \end{tikzpicture}}
 
 \begin{document}
-\fontsize{7pt}{7pt}\selectfont
-\raggedright
 \begin{multicols*}{3}
 
 % _____ BEGINNING OF DOCUMENT __________________________________________________
-\begin{center}  
-	\Large{\textbf{Wahrscheinlichkeit und Statistik}} \\
-    \small{by Amos Herz}
-\end{center}
-
+\maketitle
 \input{chapters/basics.tex}
 \input{chapters/zufallsvariablen.tex}
 \input{chapters/diskrete_stetige_zv.tex}
@@ -166,7 +142,6 @@
 \input{chapters/sonstiges.tex}
 \input{chapters/aufgaben.tex}
 
-\includegraphics[width=\linewidth]{assets/mcc.png}
 
 \end{multicols*}
 \begin{small}

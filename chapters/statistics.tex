@@ -66,6 +66,21 @@ Hierbei gilt:
 
 wobei $Z = \sqrt{n}(T-m) =  \frac{X_1 + \ldots + X_n - mn}{\sqrt{n}}$ eine standardnormalverteilte ZV ist.
 
+\renewcommand\arraystretch{1.8}
+\begin{center}
+    \begin{tabular}{c|c|p{4cm}|p{2.75cm}}
+  		$\mu_0$ & $\sigma^2$ & Erwartungstreuer Schätzer & Verteilung under $\Pm_\theta$ \\
+  		\hline
+  		\hline
+  		$\cross$ & $\checkmark$ & $\bar X_n = \frac{1}{n} \sum_{i=1}^n X_i$ & $\sqrt n (\frac{\bar X - \mu}{\sqrt \sigma^2}) \sim \mathcal{N}(0,1) $ \\
+  		\hline
+  		$\checkmark$ & $\cross$ & $T = \frac{1}{n} \sum_{i=1}^n (X_i - \mu)^2$ & $n \frac{T}{\sigma^2} \sim \mathcal{X}_n^2$ \\
+  		\hline
+  		$\cross$ & $\cross$ & $\mu: \bar X_n$, \medskip \newline $\sigma^2 : S^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar X_n)^2$ & $ \sqrt n \frac{\bar X_n - \mu}{\sqrt S^2} \sim t_{n-1}$, \smallskip \newline $(n-1) \frac{S^2}{\sigma^2} \sim \mathcal{X}_{n-1}^2$ 
+	\end{tabular}
+\end{center}
+\renewcommand{\arraystretch}{1}
+
 \Title{Verteilungsaussagen}
 
 \begin{mainbox}{{$\chi^2$-Verteilung}}

@@ -1,7 +1,7 @@
 \section*{Aufgaben}
 
 
-\subsection{Multiple Choice}
+\subsection*{Multiple Choice}
 
 Seien $A_1, A_2, A_3 \in \F$ paarweise unabhängige Ereignisse, welche Aussage ist korrekt?
 \begin{itemize}
@@ -35,31 +35,43 @@ Seien $(X_i)_{i = 1}^n$ uiv. ZV mit Verteilungsfunktion $F_{X_i} = F$. Was ist d
 	\item[$\square$] $F_M(a) = (1 - F(a))^n$
 \end{itemize}
 
-\subsection{Sonstige Aufgaben}
-
-\textbf{Aufgabe}
-Es werden ein blauer und ein grüner Würfel geworfen. Wir wählen $\Omega = \{1,...,6\}^2$. Wir betrachten die Algebra:
-$$\F_{\text{sym}} = \{ A \subseteq \Omega \; | \; \forall (\omega_1, \omega_2) \in \Omega, (\omega_1, \omega_2) \in A \Leftrightarrow (\omega_2, \omega_1) \in A  \}$$
-Zeige, dass $\F_{\text{sym}}$ eine $\sigma$-Algebra ist. \medskip
-
-Wir müssen 3 Eigenschaften überprüfen. 
-\begin{enumerate}
-	\item $\forall (\omega_1, \omega_2) \in \Omega \Leftrightarrow (\omega_2, \omega_1) \in \Omega$ daher gilt $\Omega \in \F_{\text{sym}}$.
-	\item Sei $A \in \F_{\text{sym}}$. Somit gilt für jedes $(\omega_1, \omega_2) \in \Omega$
-		$$(\omega_1, \omega_2) \in A \Leftrightarrow (\omega_2, \omega_1) \in \Omega$$
-		was äquivalent ist zu
-		$$(\omega_1, \omega_2) \in A^\complement \Leftrightarrow (\omega_2, \omega_1) \in A^\complement$$
-		somit ist $A^\complement \in \F_{\text{sym}}$.
-	\item Seien $A_1, A_2, ... \in \F_{\text{sym}}$ gilt:
-		\begin{align*}
-			(\omega_1, \omega_2) \in \cup_{i=1}^\infty A_i &\Leftrightarrow \exists i. (\omega_1, \omega_2) \in A_i \\
-			&\Leftrightarrow \exists i. (\omega_2, \omega_1) \in A_i \\
-			&\Leftrightarrow (\omega_2, \omega_1) \in \cup_{i=1}^\infty A_i
-		\end{align*}
-		Somit folgt $\cup_{i=1}^\infty A_i \in \F_{\text{sym}}$.
-\end{enumerate}
-
 \hrulefill
+
+Wenn das Niveau $\alpha$ eines Test kleiner wird
+\begin{itemize}
+	\item[\marked] Wird die Macht des Tests kleiner.
+	\item[$\square$] WIrd die Macht des Tests grösser.
+	\item[$\square$] Bleibt die Macht des Tests i.A. davon unbeeinflusst.
+\end{itemize}
+
+\subsection*{Sonstige Aufgaben}
+
+\begin{comment}
+	\textbf{Aufgabe}
+	Es werden ein blauer und ein grüner Würfel geworfen. Wir wählen $\Omega = \{1,...,6\}^2$. Wir betrachten die Algebra:
+	$$\F_{\text{sym}} = \{ A \subseteq \Omega \; | \; \forall (\omega_1, \omega_2) \in \Omega, (\omega_1, \omega_2) \in A \Leftrightarrow (\omega_2, \omega_1) \in A  \}$$
+	Zeige, dass $\F_{\text{sym}}$ eine $\sigma$-Algebra ist. \medskip
+
+
+	Wir müssen 3 Eigenschaften überprüfen. 
+	\begin{enumerate}
+		\item $\forall (\omega_1, \omega_2) \in \Omega \Leftrightarrow (\omega_2, \omega_1) \in \Omega$ daher gilt $\Omega \in \F_{\text{sym}}$.
+		\item Sei $A \in \F_{\text{sym}}$. Somit gilt für jedes $(\omega_1, \omega_2) \in \Omega$
+			$$(\omega_1, \omega_2) \in A \Leftrightarrow (\omega_2, \omega_1) \in \Omega$$
+			was äquivalent ist zu
+			$$(\omega_1, \omega_2) \in A^\complement \Leftrightarrow (\omega_2, \omega_1) \in A^\complement$$
+			somit ist $A^\complement \in \F_{\text{sym}}$.
+		\item Seien $A_1, A_2, ... \in \F_{\text{sym}}$ gilt:
+			\begin{align*}
+				(\omega_1, \omega_2) \in \cup_{i=1}^\infty A_i &\Leftrightarrow \exists i. (\omega_1, \omega_2) \in A_i \\
+				&\Leftrightarrow \exists i. (\omega_2, \omega_1) \in A_i \\
+				&\Leftrightarrow (\omega_2, \omega_1) \in \cup_{i=1}^\infty A_i
+			\end{align*}
+			Somit folgt $\cup_{i=1}^\infty A_i \in \F_{\text{sym}}$.
+	\end{enumerate}
+
+	\hrulefill
+\end{comment}
 
 \textbf{Aufgabe}
 Sei $(X_i)_{i \geq 1}$ eine unendliche Folge von unabhängig $\text{Ber}(1/2)$-verteilten ZV. Wir betrachten folgenden Algorithmus:
@@ -118,6 +130,93 @@ Somit erhalten wir $\E[T'] = \frac{2c}{\lambda^2}$.
 \hrulefill
 
 \textbf{Aufgabe}
+Konstruiere aus $U \sim \mathcal U[0,1]$ ein Ber$(1/2)$ verteilte ZV $Z$. \smallskip
+
+Die verallgemeinerte Inverse $F^{-1}$ einer Ber$(1/2)$ verteilte ZV ist definiert als:
+$$F^{-1}(\alpha) = \begin{cases}
+	0, & 0 < \alpha < 2/3 \\
+	1, & 2/3 \alpha < 1
+\end{cases}$$
+
+Aus Theorem 2.12 folgt, dass $Z:=F^{-1}(U)$ Ber$(1/2)$ verteilt ist.
+
+\hrulefill
+
+\textbf{Aufgabe}
+Seien $X,Y$ ZV mit gemeinsamer Dichte $f_{X,Y}(x,y) = 4 \frac{y}{x^3} \mathbb{I}_{0 < x \leq 1, 0 < y \leq x^2}$. Berechne $\E[X / Y]$. \medskip
+
+\begin{align*}
+	\E[X / Y] &= \int_{- \infty}^\infty \int_{- \infty}^\infty \frac{x}{y} f_{X,Y}(x,y) dy dx \\
+	&= \int_0^1 \int_0^{x^2} \frac{x}{y} \cdot 4 \frac{y}{x^3} dydx = \int_0^1 \int_0^{x^2}\frac{4}{x^2} dydx \\
+	&= \int_0^1 \frac{4}{x^2} \cdot x^2 dx = 4
+\end{align*}
+
+\hrulefill
+
+\textbf{Aufgabe}
+Sei $T \sim \text{Exp}(\lambda)$. Berechne die Dichte von $T' = c \cdot T^2$ und den Erwartungswert von $T'$. \medskip
+
+Sei $\phi: \R \mapsto \R$ messbar und beschränkt. Wir definieren $\psi(x) = \phi(c \cdot x^2)$. Somit erhalten wir:
+\begin{align*}
+	\E[\phi(T')] &= \E[\phi(c \cdot T^2)] = \E[\psi(T)] = \int_{-\infty}^\infty \psi(x) \lambda e^{-\lambda x}\1_{x \geq 0}dx \\
+	&= \int_0^\infty \phi(c \cdot x^2) \lambda e^{-\lambda x}dx = \int_0^\infty \phi(y) \lambda e^{-\lambda \sqrt{y / c}} \frac{dy}{2 \sqrt{cy}} \\
+\end{align*}
+Wobei wir die Dichte der Exponentialverteilung verwendet haben. daraus folgt:
+$$f_{T'}(y) = \frac{\lambda}{2 \sqrt{cy}} e^{-\lambda \sqrt{y / c}}$$
+Für den Erwartungswert gilt $\E[c \cdot T^2] = c \cdot \E[T^2]$:
+$$\E[T^2] = \int_{0}^\infty x^2 \lambda e^{-\lambda x}dx = \frac{2}{\lambda^2}$$
+Somit erhalten wir $\E[T'] = \frac{2c}{\lambda^2}$.
+
+\hrulefill
+
+\textbf{Aufgabe}
+Sei $X$ eine ZV mit Dichte $f_X$ und sei $Y = e^X$. Was ist die Dichte von $f_Y(y), y>0$, von $Y$?
+$$F_Y = \mathbb{P}[Y \leq y] = \mathbb{P}[e^X \leq y] = \mathbb{P}[X \leq \log y] = F_X(\log y)$$ 
+$$\Rightarrow f_y(y) = \frac{d}{dy}F_Y(y) = \frac{f_X(\log y)}{y}$$
+
+\hrulefill
+
+\textbf{Aufgabe}
+Seien $X_1, X_2$ unabhängige ZV, beide gleichverteilt auf dem Interval $[0,1]$ und sei $X = \max (X_1, X_2)$. Berechne die Dichtefunktion von $X$ und $\mathbb{P}[X_1 \leq x \; | \; X \geq y]$.
+$$F_X(t) = \mathbb{P}[\max(X_1, X_2) \leq t] = \mathbb{P}[X_1 \leq t] \cdot \mathbb{P}[X_2 \leq t] = F_{X_1}(t) \cdot F_{X_2}(t)$$
+$$\Rightarrow f_X(t) = \frac{d}{dt} F_{X_1}(t) \cdot F_{X_2}(t) = \frac{d}{dt} t^2 \cdot \mathbb{I}_{0 \leq t \leq 1} = 2t \cdot \mathbb{I}_{0 \leq t \leq 1}$$
+
+Für die Wahrscheinlichkeit brauchen wir eine Fallunterscheidung: \smallskip
+
+$x < 0$ oder $1 < x$:
+$$\mathbb{P}[X_1 \leq x \; | \; X \geq y] = 0$$
+
+$0 \leq x \leq y \leq 1$:
+$$\mathbb{P}[X_1 \leq x \; | \; X \geq y] = \frac{\mathbb{P}[X_1 \leq x \cap X \geq y]}{\mathbb{P}[X \geq y]} = \frac{x(1-y)}{1 - y^2}$$
+
+$0 \leq y \leq x \leq 1$:
+$$\mathbb{P}[X_1 \leq x \; | \; X \geq y] = \frac{\mathbb{P}[X_1 \leq x \cap X \geq y]}{\mathbb{P}[X \geq y]} = \frac{x - y^2}{1 - y^2}$$
+
+\hrulefill
+
+\textbf{Aufgabe}
+Seien $X,Y$ diskrete ZV mit Gewichtsfunktion:
+$$p(j,k) = \begin{cases}
+	C \cdot (\frac{1}{2})^k & \text{für } k = 2,3,... \text{ und } j = 1,...,k-1  \\
+	0 & \text{sonst}
+\end{cases}$$
+
+Bestimme die Konstante C.
+\begin{align*}
+	1 &\stackrel{!}{=} \Sum_{k=2}^\infty \Sum_{j=1}^{k-1} C \cdot \left( \frac{1}{2} \right)^k = C \cdot \Sum_{j=1}^\infty \left( \frac{1}{2} \right)^{j+1} \Sum_{k=0}^\infty \left( \frac{1}{2} \right)^k \\
+	&= C \cdot \Sum_{j=1}^\infty \frac{\left( \frac{1}{2} \right)^{j+1}}{1 - \frac{1}{2}} = C \cdot \Sum_{j=1}^\infty \left( \frac{1}{2} \right)^j = C \cdot \frac{\frac{1}{2}}{1 - \frac{1}{2}} = C
+\end{align*}
+
+Beweise, dass bedingt auf das Ereignis $Y = k$ die ZV $X$ gleichverteilt auf $\{ 1, ..., k-1 \}$ ist.
+$$p_Y(k) = \Sum_{j=1}^{k-1} \left( \frac{1}{2} \right)^k = (k-1) \cdot \left( \frac{1}{2} \right)^k $$
+
+Nun verwenden wir den Satz der bedingten Wahrscheinlichkeit:
+$$p_{X|Y}(j, k) = \frac{p(j,k)}{p_Y(k)} = \frac{\left( \frac{1}{2} \right)^2}{(k-1) \cdot \left( \frac{1}{2} \right)^2} = \frac{1}{1 - k} \quad \text{für } j = 1,...,k-1$$
+Somit ist $X$ gegeben $Y = k$ gleichverteilt auf $\{ 1, ..., k-1 \}$.
+
+\hrulefill
+
+\textbf{Aufgabe}
 Sei $X$ eine ZV mit Verteilungsfunktion $F_X$. Zeige, dass $X$ diskret ist.
 $$ F_X(a) = \begin{cases}
 	0, 		& a < 1 \\
@@ -141,7 +240,140 @@ Wir stellen fest, dass $F_T$ stückweise stetig differenzierbar ist (auf $(-\inf
 
 \hrulefill
 
-Am Flughafen Zürich starten und landen täglich um die 750 Flugzeuge, welche ca. 80'000 Menschen von den Ferien abholen oder in die Ferien bringen. Aufgrund der Corona-Pandemie ist die tägliche Anzahl der Passagiere am Flughafen Zürich im April 2020 auf ca. 800 gesunken, was zu einem erheblichen Flugverkehrseinbruch geführt hat. Forscher der Universität Leipzig haben herausgefunden, dass sich durch den Rückgang des Flugverkehrs ca. $9 \%$ weniger Cirruswolken bilden konnten. Da Cirruswolken dafür bekannt sind, dass sie die Wärme in der Erdatmosphäre einschliessen, vermuten wir, dass die tägliche Höchsttemperatur im April 2020 tiefer war als im Vorjahr. Die Höchsttemperaturen in den ersten 9 Tagen im April 2020 waren
+\textbf{Aufgabe}
+Seien $X,Y$ ZV mit gemeinsamer Dichtefunktion:
+$$f(x,y) = \frac{1}{x^2 y^2} \quad \text{für } x \geq 1, y \geq 1$$
+
+Berechne die Verteilungsfunktion $F_U$ von $U = \frac{X}{Y}$. \medskip
+
+Für $u \leq 0, F(u) = 0$. Für $u > 1$, ($X > Y$):
+\begin{align*}
+	F(u) &= \Pm[X/Y \leq u] = \Pm[X \leq Yu] = \int_1^\infty \int_1^{yu} \frac{1}{x^2 y^2} dxdy\\
+	&= \int_1^\infty \frac{1}{y^2} - \frac{1}{uy^3} dy = 1 - \frac{1}{2u}
+\end{align*}
+
+Für $0 < u \leq 1$, ($X \leq Y$) gehen wir gleich vor, aber mit der unteren Integralgrenze $1/u$ für das äussere Integral. Wir erhalten dann $F(u) = \frac{u}{2}$.
+
+\hrulefill
+
+\textbf{Aufgabe}
+Die ZV $X$ hat Verteilungsfunktion $F_\alpha(x) = \exp (-\exp (- (x - \alpha)))$. Zeige, dass $F_\alpha$ eine Verteilungsfunktion ist. \smallskip
+
+Für $F_\alpha$ muss folgendes gelten:
+\begin{itemize}
+	\item (rechts)stetigkeit
+	\item monoton wachsend
+	\item $\lim_{x \to \infty} F_\alpha(x) = 1$
+	\item $\lim_{x \to -\infty} F_\alpha(x) = 0$
+\end{itemize}
+
+Die Funktion ist stetig da sowohl $x - \alpha$ als auch $e^{-x}$ stetige Funktionen sind und $f,g$ stetig $\Rightarrow g \circ f$ stetig. Für die Monotonie verwenden wir: $x$ monoton wachsend $\Rightarrow e^x$ monoton wachsend. $x - \alpha$ ist monoton wachsend $\Rightarrow e^{-(x- \alpha)}$ ist monoton fallend $\Rightarrow \exp (-\exp (- (x - \alpha)))$ ist monoton wachsend. Zuletzt gilt noch:
+$$\lim_{x \to -\infty} e^{- e^{-(x-\alpha)}} = \lim_{x \to \infty} e^{-x} = 0, \qquad \lim_{x \to \infty} e^{- e^{-(x-\alpha)}} = \lim_{x \to \infty} e^0 = 1$$
+
+\hrulefill
+
+\textbf{Aufgabe}
+Seien $X \sim \mathcal P (\lambda), Y \sim \mathcal P (\mu)$, zeige, dass $X + Y \sim \mathcal P (\lambda + \mu)$.
+
+Für $k \in \N_0$:
+\begin{align*}
+	\Pm[X + Y = k] &= \sum_{l = 0}^k \Pm[X + Y = k, Y = l] = \sum_{l = 0}^k \Pm[X = k - l, Y = l] \\
+	&= \sum_{l = 0}^k \frac{\lambda^{k-l}}{(k-l)!}e^{-\lambda} \frac{\mu^l}{l!}e^{-\mu} = e^{-(\lambda + \mu)} \sum_{l = 0}^k \frac{\lambda^{k-l}}{(k-l)!}\frac{\mu^l}{l!} \\
+	&= e^{-(\lambda + \mu)} \frac{1}{k!} \sum_{l = 0}^k \frac{k!}{(k-l)! \cdot l!} \lambda^{k-l} \mu^l = e^{-(\lambda + \mu)} \frac{(\lambda + \mu)^k}{k!}
+\end{align*}
+
+\hrulefill
+
+\textbf{Aufgabe}
+Ein Gerät hat eine Lebensdauer $H \sim \text{Exp}(\lambda)$ mit Erwartungswert 60. \smallskip
+
+1) Nun haben wir zwei Geräte und wollen wissen wie die Verteilung für die Zeit bis zum ersten Defekt verteilt ist. 
+
+Aus dem Erwartungswert ergibt sich $H_1, H_2 \sim \text{Exp}(1 / 60)$. Nun ist $T = \min (H_1, H_2)$ mit Verteilungsfunktion:
+\begin{align*}
+	F_T(t) &= \Pm[T \leq t] = \Pm[\min (H_1, H_2) \leq t] \\
+	&= 1 - \Pm[\min (H_1, H_2) > t] = 1 - \Pm[H_1 > t, H_2 > t] \\
+	&= 1 - \Pm[H_1 > t] \cdot \Pm[H_2 > t] \\
+	&= 1 - \exp(-2 \lambda t)
+\end{align*}
+
+D.h. $T \sim \text{Exp}(1/30)$.
+
+\smallskip
+
+2) Wir ersetzen beide Geräte wenn eines Defekt ist und wollen wissen wie gross die Wahrscheinlichkeit ist, mehr als 35 Ersatzteile in drei Jahren zu benötigen.
+
+Sei $T_i$ die Zeit, bis das $i$-te Teil ersetzt wird, $S = T_1 + ... + T_{36}$. Nun wollen wir mit dem Grenzwertsatz die Wahrscheinlichkeit berechnen.
+\begin{align*}
+	\Pm[S \leq 1095] &= \Pm \left[ \frac{S - n \E[T_i]}{\sqrt{\sigma_T^2 n}} \leq \frac{1095 - n \E[T_i]}{\sqrt{\sigma_T^2 n}}\right] \\
+	&= \Pm \left[ \frac{S - 36 \cdot 30}{\sqrt{30^2 \cdot 36}} \leq \frac{1095 - 36 \cdot 30}{\sqrt{30^2 \cdot 36}} \right] \\
+	&= \Pm \left[ \frac{S - 1080}{180} \leq \frac{15}{180} \right] \\
+	&\approx \Phi(1/12) \approx \Phi(0.08) = 0.5319
+\end{align*}
+
+\hrulefill
+
+\textbf{Aufgabe}
+Um die Anzahl Fische $N$ in einem See zu bestimmen gehen wir wie folgt vor, zuerst werden 500 Fische gefangen und markiert. Danach werden wieder 200 Fische gefangen und die Anzahl $X$ der markierten Fische gezählt. \smallskip
+
+1) $X \sim \text{Bin}(n, \theta)$, wie gross ist $n$? Wie gross ist $\theta$, wenn die Gesamtzahl der Fische $N = 2000$ ist?
+
+$n = 200$, da wir 200 Fische herausziehen. $\theta = \frac{500}{N} = \frac{500}{2000} = \frac{1}{4}$ \smallskip
+
+2) Die Beobachtung gibt einen Wert für $X$ von 40. Gebe eine Schätzung für $\theta$ und eine Schätzung für $N$ ab.
+
+Wir schätzen $\theta$ mit $T = X / n$, der realisierte Schätzwert ist also $\theta = 1/5$. Wenn wir nun $\theta = 500 / N$ nach $N$ auflösen erhalten wir $N = 2500$. \smallskip
+
+3) Bestimme ein approximatives Konfidenzintervall für $\theta$ mit $\alpha = 0.05$.
+
+$$T = \frac{X - n \theta}{\sqrt{n\theta(1-\theta)}} \sim \mathcal N (0,1)$$
+
+Aus dem zentralen Grenzwertsatz folgt daher $\Pm_\theta [-1.96 \leq T \leq 1.96] \geq 0.95$. Unter verwendung von $\theta(1- \theta) \leq 1/4$ ergibt sich ein approximatives Vertrauensintervall für $\theta$ von:
+$$[T - \frac{1.96}{2\sqrt{n}}, T + \frac{1.96}{2 \sqrt{n}}] = [0.13, 0.27]$$
+
+\hrulefill
+
+\textbf{Aufgabe}
+Wir haben eine Münze und vermuten, dass Sie gezinkt ist und häufiger auf Kopf landet. Wir bezeichnen den $i$-ten Wurf mit $X_i$ und das Resultat ist 1 wenn Kopf und 0 wenn Zahl. Wir beobachten folgende Ergebnisse:
+$$[0,1,1,1,1,1,0,1,1,1]$$
+
+Führe einen Test mit $\alpha = 0.01$ durch. \smallskip
+
+1) Modell: \quad Wir wählen $X_i$ uiv. Ber$(\theta)$ unter $\Pm_\theta$ wobei $\theta \in [0,1]$. \smallskip
+
+2) Nullhypothese und Alternativhypothese:
+
+$$H_0: \theta = \frac{1}{2} \qquad H_A: \theta > \theta_0$$
+
+3) Teststatistik:
+
+Für $X \sim \text{Ber}(\theta)$ ist die Gewichtsfunktion $p_X(k) = p^k(1-p)^{1-k}$. Somit ist der Likelihood-Quotient:
+\begin{align*}
+	R(x_1,...,x_10; \theta_A, \theta_0) &= \frac{L(x_1,...,x_n; \theta_A)}{L(x_1,...,x_n; \theta_0)} \\
+	&= \left( \underbrace{\frac{\theta_A}{\theta_0}}_{> 1} \right)^{\sum x_i} \left( \underbrace{\frac{1 - \theta_A}{1 - \theta_0}}_{< 1} \right)^{\sum x_i}
+\end{align*}
+ Somit ist $R$ genau dann gross, wenn $\sum_{i=1}^{10} X_i$ gross ist. Daher wählen wir die Teststatistik:
+ $$T = \sum_{i=1}^{10}X_i$$
+
+4) Verteilung der Teststatistik unter $H_0$:
+
+Da $X_i \sim \text{Ber}(\theta)$ ist $T \sim \text{Bin}(10, \theta)$ unter $\Pm_\theta$. \smallskip
+
+5) Verwerfungsbereich:
+
+Wir wählen $K = (c, 10]$. Um $c$ zu bestimmen rechnen wir:
+$$\Pm_\theta[T \in K] \leq \alpha \Rightarrow \Pm_\theta[T \leq c] \geq 1- \alpha$$
+
+Mit der gegebenen Tabelle sehen wir, dass $c = 9$ der kleinste Wert für $c$ ist, welcher die Bedingung erfüllt. Somit ist $K = (9,10] = \{10\}$. \smallskip
+
+6) beobachte Wert der Teststatistik: \quad $T(\omega) = 8$ \smallskip
+
+7) Testentscheid: \quad $T(\omega) \notin K$, wir verwerfen die Nullhypothese nicht.
+
+\hrulefill
+
+
+Die Höchsttemperaturen in den ersten 9 Tagen im April 2020 waren
 \resizebox{\columnwidth}{!}{
 \begin{tabular}{|c|ccccccccc|}
 \hline Tag $i$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
@@ -203,4 +435,81 @@ Also gilt
 $$
 0 \leq \mathrm{p}-\operatorname{Wert}(\omega) \leq 0.005
 $$
+\hrulefill
+
+\textbf{Aufgabe}
+(d) Nehmen Sie an, die wirkliche mittlere Trocknungszeit beträgt 85 Minuten. Be-rechnen Sie die Wahrscheinlichkeit eines Fehlers 2. Art für diese Alternative.
+[$K = (-\infty, -2.33)$]
+Ein Fehler 2. Art für die Alternative $\mu_A = 85$ [Minuten] tritt auf, falls die Nullhypothese nicht verworfen wird, obwohl die mittlere Trocknungszeit in Wirklichkeit 85 Minuten ist. Die Wahrscheinlichkeit für so einen Fehler ist
+\begin{align*}
+	\Pm_{\mu_A}[T \notin K] & = \Pm_{\mu_A}[\frac{\overline{X}_n - \mu_0}{\sigma / \sqrt{n}}] \\
+	& = \Pm_{\mu_A}[\frac{\overline{X}_n - \mu_A}{\sigma / \sqrt{n}} - \frac{\mu_0 - \mu_A}{\sigma / \sqrt{n}} > -2.33] \\
+	& = \Pm_{\mu_A}[\frac{\overline{X}_n - \mu_A}{\sigma / \sqrt{n}} - > \ldots] \\
+	& = \ldots
+\end{align*}
+
+
+\hrulefill
+
+\textbf{Aufgabe}
+Seien $U_1, U_2, U_3$ unabhängige $\mathcal U[0,1]$ verteilte ZV. Wir betrachten die stetigen ZV:
+$$L = \min(U_1, U_2, U_3), \qquad M = \max(U_1, U_2, U_3)$$
+
+1) Berechne die Dichte von $M$ und $L$.
+
+Die drei ZV haben die gemeinsame Dichte: 
+$$f(u_1, u_2, u_3) = \mathbb I_{u_1 \in [0,1]} \mathbb I_{u_2 \in [0,1]} \mathbb I_{u_3 \in [0,1]}$$
+
+Sei nun also $\phi$ stückweise stetig und beschränkt. Wir berechnen:
+$$\E[\phi(M)] = \int_0^1 \int_0^1 \int_0^1 \phi(\max(u_1, u_2, u_3)) du_1 du_2 du_3$$
+
+Wir unterscheiden 6 verschiedene Fälle, je nachdem welche Variable das Maximum annimmt. Wir berechnen den Fall $u_3 < u_2 < u_1$ und erhalten:
+$$\int_{-\infty}^\infty \phi(u_1) \frac{1}{2} u_1^2 \mathbb I_{u_1 \in [0,1]} du_1$$
+
+Da die sechs Fälle symmetrisch sind haben wir
+$$\E[\phi(M)] = 6 \cdot \int_{-\infty}^\infty \phi(m) \frac{1}{2} m^2 \mathbb I_{m \in [0,1]} dm$$
+
+somit ist die Dicht $f_M(m) = 3m^2 \mathbb I_{m \in [0,1]}$. Da $(1 - U_1, 1- U_2,1- U_3)$ aus Symmetriegründen die gleiche gemeinsame Dichte hat wie $(U_1, U_2, U_3)$, hat L die gleiche Dichte wie $1- M$ und auf diese Weise erhält man ebenfalls $f_L(l) = 3(1 - l)^2 \mathbb I_{l \in [0,1]}$. \smallskip
+
+2) Zeige, dass für $\varphi, \phi$ stückweise stetig, beschränkt
+$$\E[\phi(M) \varphi(L)] = \int_{-\infty}^\infty \int_{-\infty}^\infty \phi(m) \varphi(l) 6(m-l) \mathbb I_{0 \leq l \leq m \leq 1} dldm$$
+
+Wir verwenden das Resultat aus der ersten Teilaufgabe und die Symmetrie:
+\begin{align*}
+	\int_0^1 & \int_0^1 \int_0^1 \phi(\max(u_1, u_2, u_3)) \varphi(\max(u_1, u_2, u_3)) du_1 du_2 du_3 \\
+	&= \int_0^1 \int_0^1 \phi(u_1) \varphi(u_3) (u_1 - u_3) \mathbb I_{u_3 \leq u_1} du_1 du_3 \\
+	\Rightarrow \E[\phi(M) \varphi(L)] &= 6 \cdot \int_{-\infty}^\infty \int_{-\infty}^\infty \phi(m) \varphi(l) (m-l) \mathbb I_{0 \leq l \leq m \leq 1} dldm
+\end{align*}
+
+3) Bestimme die gemeinsame Dicht und Verteilungsfunktion von $(M, L)$.
+
+Wir bestimmen $\phi(x) = \mathbb I_{x \leq a}, \varphi(x) = \mathbb I_{x \leq b}$ und erhalten::
+\begin{align*}
+	F_{M,L}(a,b) &= \Pm[M \leq a, L \leq b] = \E[I_{M \leq a} I_{L \leq b}] \\
+	&= \int_{-\infty}^a \int_{-\infty}^b 6(m-l) \mathbb I_{0 \leq l \leq m \leq 1} dmdl
+\end{align*}
+
+Somit ist $f_{M,L}(m,l) = 6(m-l) \mathbb I_{0 \leq l \leq m \leq 1}$ die gemeinsame Dicht. Für die Verteilungsfunktion berechnen wir das obige Integral, hierbei unterscheiden wir verschiedene Fälle:
+
+$a \leq 0$ oder $b \leq 0$:
+$$F_{M,L}(a,b) = 0$$
+
+$a \geq 1$:
+$$F_{M,L}(a,b) = F_L(b) = 1 - (1-b)^3$$
+
+$b \geq 1$:
+$$F_{M,L}(a,b) = F_M(a) = a^3$$
+
+$0 \leq a \leq b \leq 1$:
+$$F_{M,L}(a,b) = \Pm[M \leq a, L \leq b] = \Pm[M \leq a] = a^3$$
+
+$0 \leq b \leq a \leq 1$:
+\begin{align*}
+	\Pm[M \leq a, L \leq b] &= \int_{-\infty}^a \int_{-\infty}^b 6(m-l) \mathbb I_{0 \leq l \leq m \leq 1} dmdl \\
+	&= \int_0^a \int_0^{\min(b, m)} 6(m-l) dldm \\
+	&= \int_0^a [6ml - 3l^2]_0^{\min(b, m)} dm \\
+	&= \int_0^b 3m^2 dm + \int_b^a 3b(2m - b) dm \\
+	&= b^3 + 3ab(a-b)
+\end{align*}
+
 \hrulefill

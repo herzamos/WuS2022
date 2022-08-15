@@ -23,6 +23,8 @@ $$\lim_{n \to \infty} \Pm[X_n \leq x] = \Pm[X \leq x]$$
     
     Sei $\E[X^2_1] < \infty$ und wohldefiniert. Weiter sei $m = \E[X_1]$ und $\sigma^2 = \text{Var}(X_1)$, so gilt:
     $$\Pm[ \frac{S_n - n \cdot m}{\sqrt{\sigma^2 \cdot n}} \leq a] \xlongrightarrow[n \to \infty]{} \Phi(a) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^a e^{-x^2 / 2} dx$$
+    Also 
+    $$\Pm[x \leq \frac{S_n - n \cdot m}{\sqrt{\sigma^2 \cdot n}} \leq y] = \Phi(y) - \Phi(x)$$
 \end{mainbox}
 
 Der Zentrale Grenzwertsatz besagt, dass die Verteilung einer ZV

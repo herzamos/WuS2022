@@ -36,7 +36,7 @@ Die \textbf{Gewichtsfunktion} einer diskreten ZV ist definiert als:
 $$\forall x \in W. \quad p(x) = P[X = x]$$
 \end{mainbox}
 
-\Title{Diskrete Verteilungen}
+\Title{Diskrete Verteilungen Eingeschaften}
 
 \Title{Bernoulli-Verteilung} 
 Eine Bernoulli-Verteilte ZV kennt nur die Ereignisse $\{0,1\}$, wir schreiben auch $X \sim \text{Ber}(p)$. Sie wird definiert durch: 
@@ -45,11 +45,7 @@ Eine Bernoulli-Verteilte ZV kennt nur die Ereignisse $\{0,1\}$, wir schreiben au
 \end{mainbox}
 
 \Title{Binomialverteilung}
- Dies beschreibt die Wiederholung von Bernoulli-Experimenten. Wir schreiben $X \sim \text{Bin}(n,p)$ und definieren:
-
- \begin{mainbox}{Binomialverteilung}
-    $$\forall k \in \{0, 1, ..., n\}. \quad \Pm[X = k] = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}$$
- \end{mainbox}
+ Dies beschreibt die Wiederholung von Bernoulli-Experimenten. Wir schreiben $X \sim \text{Bin}(n,p)$.
 
  \begin{subbox}{}
     Sei $0 \leq p \leq 1, n \in \N$. \\
@@ -60,11 +56,7 @@ Eine Bernoulli-Verteilte ZV kennt nur die Ereignisse $\{0,1\}$, wir schreiben au
 
 Insbesondere ist die Verteilung Bin$(1, p)$ die gleiche wie die Verteilung Ber$(p)$. Man kann auch prüfen, dass wenn $X \sim$ Bin$(m, p)$ und $Y \sim$ Bin$(n, p)$ und $X, Y$ unabhängig sind, dann $X + Y \sim$ Bin$(m + n, p)$.
 
-\Title{Geometrische Verteilung} Eine Geometrische Verteilung beschriebt das erste Auftreten eines Erfolges. Wir schreiben $X \sim \text{Geom}(p)$ und definieren:
-
-\begin{mainbox}{Geometrische Verteilung}
-    $$\forall k \in \N - \{0\}. \quad \Pm[X = k] = (1-p)^{k-1} \cdot p$$
-\end{mainbox}
+\Title{Geometrische Verteilung} Eine Geometrische Verteilung beschriebt das erste Auftreten eines Erfolges. Wir schreiben $X \sim \text{Geom}(p)$.
 
 \begin{subbox}{}
     Sei $X_1, X_2, \ldots$ eine Folge von unendlich vielen unabhängigen Bernoulli ZV mit dem Parameter $p$. Dann
@@ -77,11 +69,7 @@ Insbesondere ist die Verteilung Bin$(1, p)$ die gleiche wie die Verteilung Ber$(
     $\forall n \geq 0 \forall k \geq 1 \Pm[T \geq n + k | T > n] = P[T \geq k]$.
 \end{subbox}
 
-\Title{Poisson-Verteilung} Diese Verteilung ist eine Annäherung an die Binomialverteilung für grosse $n$ und kleine $p$. Sie nimmt nur Werte in $\N$ an. Wir schreiben $X \sim \text{Poisson}(\lambda)$ und definieren:
-
-\begin{mainbox}{Poisson-Verteilung}
-    $$\forall k \in \N, \lambda > 0. \quad \Pm[X = k] = \frac{\lambda^k}{k!}\cdot e^{-\lambda}$$
-\end{mainbox}
+\Title{Poisson-Verteilung} Diese Verteilung ist eine Annäherung an die Binomialverteilung für grosse $n$ und kleine $p$. Sie nimmt nur Werte in $\N$ an. Wir schreiben $X \sim \text{Poisson}(\lambda)$.
 
 \begin{subbox}{Poisson-Approximation der Binomialform}
     Es sei $\lambda > 0$. Für jedes $n \geq 1$,
@@ -108,36 +96,16 @@ Es gelten folgende Eigenschaften:
 \end{enumerate}
 
 
-\Title{Stetige Verteilungen}
+\Title{Stetige Verteilungen Eingeschaften}
 
 \Title{Gleichverteilung} 
-Dies beschreibt die Situation wobei jedes Ereignis die gleiche Wahrscheinlichkeit hat. Wir schreiben $X \sim \mathcal{U}([a,b])$ und definieren:
-\begin{mainbox}{Gleichverteilung}
-$$f_{a,b}(x) = \begin{cases}
-    0 & x \notin [a,b] \\
-    \frac{1}{b-a} & x \in [a,b]
-\end{cases}$$
-\end{mainbox}
+Dies beschreibt die Situation wobei jedes Ereignis die gleiche Wahrscheinlichkeit hat. Wir schreiben $X \sim \mathcal{U}([a,b])$.
 \begin{subbox}{Eigenschaften einer Gleichverteilte ZV $X$ in $[a, b]$:}
-    \begin{itemize}
-        \item Die Wahrscheinlichkeit, in ein Intervall $[c, c + l] \subset [a, b]$ zu fallen, hängt nur von seiner Länge $l$ ab:
+    Die Wahrscheinlichkeit, in ein Intervall $[c, c + l] \subset [a, b]$ zu fallen, hängt nur von seiner Länge $l$ ab:
         $$\Pm[X \in [c, c+l]] = \frac{l}{b-a}$$
-        \item Die Verteilungsfunktion von $X$ ist gleich
-        $$F_X(x) = \begin{cases}
-            0 & x < a, \\
-            \frac{x-a}{b-a} & a \leq x \leq b, \\
-            1 & x > b.
-        \end{cases}$$
-    \end{itemize}
 \end{subbox}
 
-\Title{Exponentialverteilung} Dies ist das stetige Pendant zur Geometrischen Verteilung. Wir schreiben $X \sim \text{Exp}(\lambda)$ und definieren:
-\begin{mainbox}{Exponentialverteilung}
-    $$f_{a,b}(x) = \begin{cases}
-        0 &x < 0 \\
-       \lambda \cdot e^{-\lambda x} & x \geq 0
-    \end{cases}$$
-\end{mainbox}
+\Title{Exponentialverteilung} Dies ist das stetige Pendant zur Geometrischen Verteilung. Wir schreiben $X \sim \text{Exp}(\lambda)$.
 
 \begin{subbox}{Eigenschaften einer Exponentialverteilte ZV $T$ mit Parameter $\lambda$}
     \begin{itemize}
@@ -149,10 +117,7 @@ $$f_{a,b}(x) = \begin{cases}
 \end{subbox}
 
 
-\Title{Normalverteilung} Wir schreiben $X \sim \mathcal{N}(m, \sigma^2)$ und definieren:
-\begin{mainbox}{Normalverteilung}
-    $$f_{m, \sigma}(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \cdot e^{-\frac{(x-m)^2}{2 \sigma^2}}$$
-\end{mainbox}
+\Title{Normalverteilung} Wir schreiben $X \sim \mathcal{N}(m, \sigma^2)$.
 
 \begin{subbox}{Eigenschaften einer Normalverteilte ZV}
     \begin{itemize}
@@ -177,5 +142,3 @@ $$f_{a,b}(x) = \begin{cases}
 
 
 ist tabelliert. Ist $X \sim \mathcal{N}(\mu,\sigma^2)$, so ist $\frac{X - \mu}{\sigma} \sim \mathcal{N}(0,1)$.
-
-\columnbreak

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.1)  12 AUG 2022 17:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.1)  15 AUG 2022 23:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -8,8 +8,8 @@ entering extended mode
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-06-18> (c:/texlive/2021/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
-(c:/texlive/2021/texmf-dist/tex/latex/extsizes/size9.clo
-File: size9.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+(c:/texlive/2021/texmf-dist/tex/latex/extsizes/size8.clo
+File: size8.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
 ) (c:/texlive/2021/texmf-dist/tex/latex/base/exscale.sty
 Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
@@ -600,20 +600,20 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
  (c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count329
@@ -641,23 +641,23 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: landscape 
-* h-part:(L,W,R)=(21.33955pt, 802.36774pt, 21.33955pt)
-* v-part:(T,H,B)=(28.45274pt, 526.376pt, 42.67912pt)
+* h-part:(L,W,R)=(22.76228pt, 799.52228pt, 22.76228pt)
+* v-part:(T,H,B)=(22.76228pt, 551.9833pt, 22.76228pt)
 * \paperwidth=845.04684pt
 * \paperheight=597.50787pt
-* \textwidth=802.36774pt
-* \textheight=526.376pt
-* \oddsidemargin=-50.93044pt
-* \evensidemargin=-50.93044pt
-* \topmargin=-80.81725pt
+* \textwidth=799.52228pt
+* \textheight=551.9833pt
+* \oddsidemargin=-49.5077pt
+* \evensidemargin=-49.5077pt
+* \topmargin=-86.5077pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=9.0pt
-* \footskip=15.0pt
+* \footskip=30.0pt
 * \marginparwidth=65.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=8.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=7.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -667,59 +667,46 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 132.
-(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+(./chapters/basics.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 132.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./chapters/basics.tex) (./chapters/zufallsvariablen.tex [1
+)) (./chapters/zufallsvariablen.tex) (./chapters/diskrete_stetige_zv.tex [1
 
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./chapters/diskrete_stetige_zv.tex [2]) (./chapters/erwartungswert.tex [3]) (./chapters/gemeinsame_verteilungen.tex
-Overfull \hbox (14.93568pt too wide) detected at line 42
-\U/msb/m/n/9 E\OT1/cmr/m/n/9 [\OML/cmm/m/it/9 ^^^\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 X[]; :::; X[]\OT1/cmr/m/n/9 )] = [][] \OML/cmm/m/it/9 ::: [][] ^^^\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 x[]; :::; x[]\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 ^^A \OML/cmm/m/it/9 f\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 x[]; :::; x[]\OT1/cmr/m/n/9 )\OML/cmm/m/it/9 dx[]:::dx[]
- []
-
-) (./chapters/grenzwertsaetze.tex [4]) (./chapters/w_sonstiges.tex) (./chapters/statistics.tex [5]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 73.
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./chapters/erwartungswert.tex [2]) (./chapters/gemeinsame_verteilungen.tex) (./chapters/grenzwertsaetze.tex) (./chapters/w_sonstiges.tex) (./chapters/statistics.tex [3]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 88.
  (c:/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [6]) (./chapters/test_beispiel.tex [7]) (./chapters/sonstiges.tex
-Overfull \hbox (32.4979pt too wide) in paragraph at lines 47--59
- [] 
- []
-
-[8]
-<assets/funktionen.png, id=55, 1747.52875pt x 804.00375pt>
+) [4]) (./chapters/test_beispiel.tex [5]) (./chapters/sonstiges.tex
+<assets/funktionen.png, id=38, 1747.52875pt x 804.00375pt>
 File: assets/funktionen.png Graphic file (type png)
 <use assets/funktionen.png>
-Package pdftex.def Info: assets/funktionen.png  used on input line 105.
-(pdftex.def)             Requested size: 260.78925pt x 119.98195pt.
-) (./chapters/aufgaben.tex
-Overfull \hbox (15.52724pt too wide) detected at line 89
-[]
- []
-
-[9 <./assets/funktionen.png>]) [10] (./chapters/verteilungen_table.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 32--150
-
- []
-
-[11] (./main.aux) ) 
+Package pdftex.def Info: assets/funktionen.png  used on input line 107.
+(pdftex.def)             Requested size: 259.84076pt x 119.5403pt.
+) (./chapters/aufgaben.tex [6 <./assets/funktionen.png>] [7] [8])
+<assets/mcc.png, id=52, 643.40375pt x 824.07875pt>
+File: assets/mcc.png Graphic file (type png)
+<use assets/mcc.png>
+Package pdftex.def Info: assets/mcc.png  used on input line 169.
+(pdftex.def)             Requested size: 259.84076pt x 332.81956pt.
+ [9 <./assets/mcc.png>] (./chapters/verteilungen_table.tex) [10] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 19791 strings out of 478519
- 376331 string characters out of 5853953
- 736839 words of memory out of 5000000
- 37337 multiletter control sequences out of 15000+600000
- 416924 words of font info for 78 fonts, out of 8000000 for 9000
+ 19735 strings out of 478519
+ 375722 string characters out of 5853953
+ 755154 words of memory out of 5000000
+ 37300 multiletter control sequences out of 15000+600000
+ 409465 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,17n,108p,828b,726s stack positions out of 5000i,500n,10000p,200000b,80000s
- <c:/Users/herza/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm9.600pk>{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (11 pages, 554818 bytes).
+ 102i,17n,108p,582b,717s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <c:/Users/herza/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm7.600pk>{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on main.pdf (10 pages, 2198868 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
+ 136 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

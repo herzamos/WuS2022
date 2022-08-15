@@ -28,7 +28,7 @@ Wobei $z_\alpha = \Phi^{-1}(\alpha)$ ist und $z_\alpha = -z_{1-\alpha}$.
 \Title{Normalverteilung, Test für Erwartungswert} \\
 \Title{bei unbekannter Varianz, t-Test}
 
-\textbf{Variabeln}: $X_1, \ldots , X_n$ i.i.d. $\sim$ $\mathcal{N}(\mu, \sigma^2)$ unter $\Pm_\mu$ wobei $\mu = (\mu, \sigma^2)$.
+\textbf{Variabeln}: $X_1, \ldots , X_n$ i.i.d. $\sim$ $\mathcal{N}(\mu, \sigma^2)$ unter $\Pm_\theta$ wobei $\theta = (\mu, \sigma^2)$.
 
 \textbf{Hypothese}: $H_0 : \mu = \mu_0$
 
@@ -36,7 +36,7 @@ Wobei $z_\alpha = \Phi^{-1}(\alpha)$ ist und $z_\alpha = -z_{1-\alpha}$.
 
 \textbf{Teststatistik}:
 $$
-T:=\frac{\bar{X}_{n}-\mu_{0}}{S / \sqrt{n}} \sim t_{n-1} \text { unter } \mathbb{P}_{\mu_{0}}
+T:=\frac{\bar{X}_{n}-\mu_{0}}{S / \sqrt{n}} \sim t_{n-1} \text { unter } \mathbb{P}_{\theta_{0}}
 $$
 wir ersetzen also die unbekannte Varianz durch den Schätzer
 $$
@@ -56,7 +56,7 @@ $$
 	\end{tabular}
 \end{center}
 \renewcommand{\arraystretch}{1}
-Wobei $t_{m, \gamma}$ es gilt $P\left[X \leq t_{m, \gamma}\right]=\gamma$ für $X$-verteilt mit $m$ Freiheitsgraden, d.h. $X \sim t_{m}$.
+Wobei $t_{m, \gamma}$ es gilt $P\left[X \leq t_{m, \gamma}\right]=\gamma$ für $X$-verteilt mit $m$ Freiheitsgraden, d.h. $X \sim t_{m}$ und $t_{n-1, \alpha} = -t_{n-1, 1-\alpha}$.
 
 \Title{Gepaarter Zweistichproben-Test bei Normalverteilung}
 
